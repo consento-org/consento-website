@@ -1,11 +1,15 @@
 <footer>
     <nav class="pagination" role="navigation">
+        <div class="prev">
         {{#if prev}}
         <a class="page previous newer-posts" href="{{page_url prev}}">Newer Posts</a>
         {{/if}}
+        </div>
         <span class="page-number">Page {{page}} of {{pages}}</span>
+        <div class="next">
         {{#if next}}
         <a class="page next older-posts" href="{{page_url next}}">Older Posts</a>
         {{/if}}
+        </div>
     </nav>
 </footer>
