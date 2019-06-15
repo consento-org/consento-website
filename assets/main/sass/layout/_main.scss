@@ -12,13 +12,10 @@
 		width: 100%;
 
 		> .inner {
-			@include padding(0, 6em);
 			margin: 0 auto;
-			max-width: 110em;
 
 			> section {
 				@include padding(6em, 0);
-				border-top: solid 2px _palette(border);
 
 				&:first-of-type {
 				 	border-top: 0 !important;
@@ -28,7 +25,6 @@
 
 		@include breakpoint('<=xlarge') {
 			> .inner {
-				@include padding(0, 5em);
 
 				> section {
 					@include padding(5em, 0);
@@ -38,7 +34,6 @@
 
 		@include breakpoint('<=large') {
 			> .inner {
-				@include padding(0, 4em);
 
 				> section {
 					@include padding(4em, 0);
@@ -48,7 +43,6 @@
 
 		@include breakpoint('<=small') {
 			> .inner {
-				@include padding(0, 2em);
 
 				> section {
 					@include padding(3em, 0);

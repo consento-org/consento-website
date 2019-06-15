@@ -3,8 +3,14 @@
 into the {body} of the default.hbs template --}}
 
 {{#post}}
-{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#if feature_image}}
+<section class="featured">
+    <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
+</section>
 <section>
+{{^}}
+<section class="no-featured">
+{{/if}}
 
     <header class="main content">
         <span class="date">{{date format="MMMM D, YYYY"}}</span>
@@ -13,10 +19,6 @@ into the {body} of the default.hbs template --}}
             <p class="content">{{custom_excerpt}}</p>
         {{/if}}
     </header>
-
-    {{#if feature_image}}
-    <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
-    {{/if}}
 
     <div class="content">
         {{content}}

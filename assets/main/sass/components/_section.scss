@@ -7,28 +7,52 @@
 /* Section/Article */
 
 	section, article {
+		position: relative;
+		z-index: 1;
 		&.special {
 			text-align: center;
 		}
 	}
 
+	section.featured {
+		padding: 0!important;
+		overflow: hidden;
+		display: block;
+		height: 32vw;
+		z-index: 0;
+		padding-top: 3em;
+		margin-bottom: -10em;
+
+		@include breakpoint('<=large') {
+			height: 47vw;
+		}
+	}
+	@include breakpoint('<=small') {
+		section.no-featured {
+			margin-top: 10em;
+		}
+	}
+
+
 	header {
-		p {
-			font-family: _font(family-heading);
+
+		&.content {
+			padding-top: 1em;
+			min-height: 3em;
+		}
+		section > & .content {
+			border-left: 2px solid _palette(fg-alt);
+		}
+		p, .content {
+			font-family: _font(family-heading-alt);
 			font-size: 1em;
 			font-weight: _font(weight-heading-alt);
-			letter-spacing: _font(kerning-heading);
 			margin-top: -0.5em;
-			text-transform: uppercase;
+			padding: 0.3em 1em;
 		}
-
-		&.major {
-			> :last-child {
-				border-bottom: solid 3px _palette(accent);
-				display: inline-block;
-				margin: 0 0 _size(element-margin) 0;
-			 	padding: 0 0.75em 0.5em 0;
-			}
+		.tagline {
+			text-align: center;
+			padding: 0.5em;
 		}
 
 		&.main {
