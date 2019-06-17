@@ -1,29 +1,6 @@
 // Main
 // --------------------------------------------
 
-#header .logo {
-    color: #3d4449;
-    font-weight: bold;
-}
-
-#header .logo.image {
-    padding: 0;
-    border: none;
-    display: inline-flex;
-    height: 28px;
-
-    @include breakpoint('<=small') {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-}
-
-#header .logo.image img {
-    height: 28px;
-    transform: none !important;
-}
-
 @include breakpoint('<=small') {
     #sidebar:not(.inactive) .toggle:before {
         color: #fff;
