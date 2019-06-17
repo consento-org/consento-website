@@ -7,34 +7,3 @@
 
   <img src="{{asset "movie/consento-large.jpg"}}" width="100%">
 </video>
-<script>
-  (function (node, video) {
-    var firstplay = false
-    var formerPos = null
-    var MAX = 250
-    var SEGMENTS = 7
-    var num = 0
-
-    node.addEventListener('mousemove', updateVideoPosition)
-    node.addEventListener('touchmove', updateVideoPosition)
-    node.addEventListener('touchstart', updateVideoPosition)
-    node.addEventListener('touchend', updateVideoPosition)
-
-    function updateVideoPosition (e){
-      e.preventDefault();
-      var newPos = { x: e.screenX, y: e.screenY }
-      if (formerPos !== null && video.readyState === 4) {
-        var diffX = newPos.x - formerPos.x
-        var diffY = newPos.y - formerPos.y
-        var diff = diffX + diffY
-        var diffAbs = Math.abs(diff)
-        var limitedAbsDiff = Math.min(diffAbs, MAX)
-        // var limitedDiff = diff < 0 ? limitedAbsDiff * -1 : limitedAbsDiff
-
-        num += video.duration / (MAX * SEGMENTS) * limitedAbsDiff
-        video.currentTime = num
-      }
-      formerPos = newPos
-    }
-  })(document.body, document.getElementById('main-video'))
-</script>
