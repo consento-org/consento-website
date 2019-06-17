@@ -6,6 +6,10 @@
 
 /* Sidebar */
 
+	.dat:hover g {
+		fill: _palette(accent);
+	}
+
 	#search {
 		form {
 			@include icon;
@@ -31,6 +35,28 @@
 			input[type="text"] {
 				padding-right: _size(element-height);
 			}
+		}
+	}
+
+	#sidebar-closed {
+		position: absolute;
+		left: 1.5em;
+		top: 1.5em;
+		margin-top: 27px;
+		cursor: pointer;
+		.toggle {
+			position: absolute;
+			width: 6em;
+			height: 6em;
+			left: 0;
+			top: 0;
+			overflow: hidden;
+			text-indent: 6em;
+			border: 0;
+		}
+		&.inactive {
+			display: block;
+			z-index: 1000000;
 		}
 	}
 
@@ -85,6 +111,7 @@
 		.toggle {
 			@include icon;
 			@include vendor('transition', 'left 0.5s ease');
+			cursor: pointer;
 			-webkit-tap-highlight-color: rgba(255,255,255,0);
 			border: 0;
 			display: block;
