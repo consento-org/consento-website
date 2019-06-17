@@ -23,6 +23,7 @@
 	$font: (
 		family:				('Roboto', sans-serif),
 		family-heading:		('Patua One', serif),
+		family-heading-alt:		('Roboto', serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				400,
 		weight-bold:		600,
@@ -33,12 +34,13 @@
 
 // Palette.
 	$palette: (
-		bg:					#ffffff,
-		bg-alt:				#f5f6f7,
-		fg:					#7f888f,
+		bg:						#ffffff,
+		bg-alt:				#efefef,
+		fg:						#7f888f,
+		fg-alt:				#9fa3a6,
 		fg-bold:			#3d4449,
 		fg-light:			#9fa3a6,
-		border:				rgba(210,215,217,0.75),
-		border-bg:			transparentize(#e6ebed, 0.75),
-		accent:				#f56a6a
+		border:				rgba(210, 215, 217, 0.75),
+		border-bg:			transparentize(#efefef, 0.75),
+		accent:				#f03434
 	);
