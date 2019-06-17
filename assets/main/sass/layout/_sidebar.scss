@@ -128,7 +128,7 @@
 			z-index: _misc(z-index-base);
 
 			&:before {
-				content: '\f0c9';
+				content: '←';
 				font-size: 2rem;
 				height: inherit;
 				left: 0;
@@ -142,6 +142,9 @@
 
 		&.inactive {
 			margin-left: (_size(sidebar-width) * -1);
+			.toggle:before {
+				content: "→";
+			}
 		}
 
 		@include breakpoint('<=xlarge') {
