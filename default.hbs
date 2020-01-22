@@ -56,3 +56,29 @@
 
 </body>
 </html>
+
+<script>
+    let prevScrollpos = window.pageYOffset;
+    $(window).scroll(function(e) {
+        let scroll = $(window).scrollTop();
+        let currentScrollpos = window.pageYOffset;
+        if (prevScrollpos < currentScrollpos) {
+            $('.navbar').addClass("navbar-hide");
+        } else {
+            $('.navbar').removeClass("navbar-hide");
+        }
+        prevScrollpos = currentScrollpos;
+    });
+</script>
+<style>
+    .navbar {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        box-shadow: 0px 3px rgb(243, 241, 241)
+    }
+
+    .navbar-hide {
+        pointer-events: none;
+        opacity: 0;
+    }
+</style>
