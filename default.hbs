@@ -62,7 +62,7 @@
     $(window).scroll(function(e) {
         let scroll = $(window).scrollTop();
         let currentScrollpos = window.pageYOffset;
-        if (prevScrollpos < currentScrollpos) {
+        if (prevScrollpos < currentScrollpos && currentScrollpos !== 0) {
             $('.navbar').addClass("navbar-hide");
         } else {
             $('.navbar').removeClass("navbar-hide");
@@ -71,6 +71,42 @@
     });
 </script>
 <style>
+    @font-face {
+        font-family: 'WorkSans-Regular';
+        src: url('WorkSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+    }
+    @font-face {
+        font-family: 'WorkSans-SemiBold';
+        src: url('WorkSans-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    }
+    @font-face {
+        font-family: 'WorkSans-ExtraBold';
+        src: url('WorkSans-ExtraBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    }
+    @font-face {
+        font-family: 'Catamaran-SemiBold';
+        src: url('Catamaran-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    }
+    @font-face {
+        font-family: 'Catamaran-ExtraBold';
+        src: url('Catamaran-ExtraBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    }
+    h1, button {
+        font-family: Catamaran-SemiBold;
+        line-height: 1.2
+    }
+    h2 {
+        font-family: Catamaran-ExtraBold;
+    }
+
+    h3, h4, h5, h6 {
+        font-family: WorkSans-SemiBold;
+    }
+
+    p {
+        font-family: WorkSans-Regular;
+    }
+    
     .navbar {
         opacity: 1;
         transition: opacity 0.5s ease;
