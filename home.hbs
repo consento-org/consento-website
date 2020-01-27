@@ -30,7 +30,7 @@ You think you already know a lot about how to handle data privacy?</p>
                 <p class="extra-spacing">An app for individuals and organizations to handle their confidential data 
 through the people they trust.</p>
                 <div class="button-wrapper">
-                    <a href="" class="btn btn-primary extra-spacing default_button mt-5" role="button">Be the first to use it</a>
+                    <a href="/mailform/" class="btn btn-primary extra-spacing default_button mt-5" role="button">Be the first to use it</a>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@ through the people they trust.</p>
     </div>
     <div class="container">
         <div id="how_it_works" class="row align-items-center mt-5 mb-5">
-            <div class="row align-items-center mt-5 mb-5">
+            <div class="row align-items-center mt-5 mb-1">
                 <div class="col-sm-3">
                     <h3 class="mb-3">Encryption</h3>
                     <img class="img-fluid mb-3" src="{{asset "images/04-how-to-1.png"}}" />
@@ -165,7 +165,7 @@ through the people they trust.</p>
                 <p class="mb-3">Currently working on the MVP.</p>
                 <p class="mb-3">Want to be among the first to test Consento?</p>
                 <div class="button-wrapper">
-                    <a href="" class="btn btn-primary extra-spacing default_button mt-5" role="button">Sign up for MVP</a>
+                    <a href="/mailform/" class="btn btn-primary extra-spacing default_button mt-5" role="button">Sign up for MVP</a>
                 </div>
             </div>
         </div>
@@ -214,21 +214,31 @@ through the people they trust.</p>
         overflow: auto;
     }
 
+    #how_it_works .col-sm-3 {
+        min-height: 370px;
+    }
+
     .default_button {
         font-family: Catamaran-SemiBold;
+        font-style: normal;
         line-height: 1.2;
         text-decoration: none;
         vertical-align: center;
-        padding-top: 13px;
+        padding-top: 14px;
         height: 60px;
         min-width: 200px;
         border: none;
         border-radius: 11px;
-        background-color: rgba(157, 224, 239, 0.35);
+        background-color: #37AFC9;
         box-shadow: none;
         font-size: 24px;
         font-weight: 600;
-        color: rgba(9, 120, 208, 0.87) !important;
+        color: white !important
+    }
+
+    .default_button:hover {
+        background-color: #9DE0EF;
+        color: white !important;
     }
 
     .extra-spacing {
