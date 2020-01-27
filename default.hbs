@@ -73,61 +73,50 @@
 </script>
 <style>
     @font-face {
-        font-family: 'WorkSans-Regular';
-        src: url('WorkSans-Regular.ttf'), format('truetype'); /* Safari, Android, iOS */
-        font-style: normal;
-        font-weight: 400;
+        font-family:'Catamaran-SemiBold';
+        font-style:normal;
+        src:local("Catamaran-SemiBold"),url('/assets/main/fonts/Catamaran-SemiBold.ttf') format('truetype');
     }
+
+    @font-face {
+        font-family: 'WorkSans-Regular';
+        src: url('/assets/main/fonts/WorkSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+        font-style: normal;
+    }
+
     @font-face {
         font-family: 'WorkSans-SemiBold';
-        src: url('WorkSans-SemiBold.ttf'), format('truetype'); /* Safari, Android, iOS */
+        src: url('/assets/main/fonts/WorkSans-SemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
         font-style: normal;
-        font-weight: 600;
     }
     @font-face {
         font-family: 'WorkSans-ExtraBold';
-        src: url('WorkSans-ExtraBold.ttf'), format('truetype'); /* Safari, Android, iOS */
+        src: url('/assets/main/fonts/WorkSans-ExtraBold.ttf') format('truetype'); /* Safari, Android, iOS */
         font-style: normal;
-        font-weight: 900;
-    }
-    @font-face {
-        font-family: 'Catamaran-SemiBold';
-        src: url('Catamaran-SemiBold.ttf'), format('truetype'); /* Safari, Android, iOS */
-        font-style: normal;
-        font-weight: 600;
     }
     @font-face {
         font-family: 'Catamaran-ExtraBold';
-        src: url('Catamaran-ExtraBold.ttf'), format('truetype'); /* Safari, Android, iOS */
+        src: url('/assets/main/fonts/Catamaran-ExtraBold.ttf') format('truetype'); /* Safari, Android, iOS */
         font-style: normal;
-        font-weight: 900;
     }
 
     h1 {
-        font-family: Catamaran-SemiBold;
+        font-family: 'Catamaran-SemiBold';
         line-height: 1.2;
-        font-weight: 600;
         color: #2B2B2B;
     }
     h2 {
-        font-family: Catamaran-ExtraBold;
-        font-weight: 900;
+        font-family: 'Catamaran-ExtraBold';
         color: #2B2B2B;
     }
 
     h3, h4, h5, h6 {
-        font-family: WorkSans-SemiBold;
-        font-weight: 600;
+        font-family: 'WorkSans-SemiBold';
         color: #2B2B2B;
     }
 
     p {
-        font-family: WorkSans-Regular;
-        font-weight: 400;
-    }
-    
-    header.content {
-        padding-top: 9em !important;
+        font-family: 'WorkSans-Regular';
     }
 
     .navbar {
@@ -140,7 +129,6 @@
         pointer-events: none;
         opacity: 0;
     }
-
     footer {
         background-color: rgba(44, 139, 218, 0.87);
         color: #fff;

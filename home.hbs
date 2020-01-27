@@ -4,7 +4,7 @@
 <section id="consento_home">
     <div class="container">
         <div class="row">
-            <div class="col-sm-5 align-center">
+            <div class="col-sm-5">
                 <h1 class="mt-5">Data privacy 
 for humans, 
 by humans.</h1>
@@ -12,7 +12,7 @@ by humans.</h1>
 
 You think you already know a lot about how to handle data privacy?</p>
                 <div class="button-wrapper">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe49RVN1ZCCTAyic0yg5fNI5WKEQl_v8BUmsG4tCjTtuagENg/viewform" class="btn btn-primary default_button mt-5" role="button">Test your privacy level</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe49RVN1ZCCTAyic0yg5fNI5WKEQl_v8BUmsG4tCjTtuagENg/viewform" target="_blank" class="btn btn-primary default_button mt-5" role="button">Test your privacy level</a>
                 </div>            
             </div>
             <div class="col-sm-7">
@@ -23,18 +23,19 @@ You think you already know a lot about how to handle data privacy?</p>
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img class="img-fluid" src="{{asset "/images/illustration-00-app.png"}}" />
+                <img class="img-fluid" src="{{asset "/images/illustration-00-app.png"}}" style="max-width: 80%;"/>
             </div>
             <div class="col-sm-6 text-right">
                 <h2 class="mt-5 mb-5">Our solution</h2>
                 <p class="extra-spacing">An app for individuals and organizations to handle their confidential data 
 through the people they trust.</p>
                 <div class="button-wrapper">
-                    <a href="/mailform/" class="btn btn-primary extra-spacing default_button mt-5" role="button">Be the first to use it</a>
+                    <a href="/mailform/" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Be the first to use it</a>
                 </div>
             </div>
         </div>
     </div>
+    </br>
     <div class="container">
         <div id="tech" class="row mt-5 mb-5">
             <div class="col-sm-6">
@@ -42,8 +43,8 @@ through the people they trust.</p>
                 <p class="mb-2">A lot of encryption, and a bit of Shamir’s secret.</p>
                 <p class="extra-spacing">Read more about our white paper here, and join us in this great adventure on Git.</p>
                 <div class="align-items-bottom mt-5 text-center">
-                    <a href="https://github.com/consento-org/" class="btn btn-primary extra-spacing default_button mt-5" role="button">Git</a>
-                    <a href="https://keybase.io/team/consento" class="btn btn-primary extra-spacing default_button mt-5" role="button">Keybase</a>
+                    <a href="https://github.com/consento-org/" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Git</a>
+                    <a href="https://keybase.io/team/consento" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Keybase</a>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -56,6 +57,7 @@ through the people they trust.</p>
             </div>
         </div>
     </div>
+    </br>
     <div class="container">
         <div class="row pt-5 mt-5 mb-5 pt-5">
             <div class="col-sm-12 text-center">
@@ -64,8 +66,8 @@ through the people they trust.</p>
         </div>
     </div>
     <div class="container">
-        <div id="how_it_works" class="row align-items-center mt-5 mb-5">
-            <div class="row align-items-center mt-5 mb-1">
+        <div id="how_it_works" class="row align-items-center text-center mt-5 mb-5">
+            <div class="row align-items-center mt-5 mb-5">
                 <div class="col-sm-3">
                     <h3 class="mb-3">Encryption</h3>
                     <img class="img-fluid mb-3" src="{{asset "images/04-how-to-1.png"}}" />
@@ -165,7 +167,7 @@ through the people they trust.</p>
                 <p class="mb-3">Currently working on the MVP.</p>
                 <p class="mb-3">Want to be among the first to test Consento?</p>
                 <div class="button-wrapper">
-                    <a href="/mailform/" class="btn btn-primary extra-spacing default_button mt-5" role="button">Sign up for MVP</a>
+                    <a href="/mailform/" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Sign up for MVP</a>
                 </div>
             </div>
         </div>
@@ -180,21 +182,25 @@ through the people they trust.</p>
     <div class="container mb-5">
         <div id="trusted_companies" class="row text-center mt-5">
             <div class="col-sm-4">
+                <a href="https://ledgerproject.eu" target="_blank">
                 <img class="img-fluid" src="{{asset "images/bitmap.png"}}" />
                 <h4 class="mt-2">LEDGER</h4>
+                </a>
             </div>
             <div class="col-sm-4">
-                <img class="img-fluid" src="{{asset "images/NGI.png"}}" />
+                <a href="https://ledgerproject.eu" target="_blank"><img class="img-fluid" src="{{asset "images/port parallele.png"}}" />
                 <h4 class="mt-2">Port Parallele</h4>
+                </a>
             </div>
             <div class="col-sm-4">
-                <img class="img-fluid" src="{{asset "images/port parallele.png"}}" />
+                <a href="https://www.ngi.eu" target="_blank">
+                <img class="img-fluid" src="{{asset "images/NGI.png"}}" />
                 <h4 class="mt-2">NGI</h4>
+                </a>
             </div>
         </div>
     </div>
 </section>
-
 <style>
     #consento_home {
         margin-top: 155px;
@@ -218,13 +224,21 @@ through the people they trust.</p>
         min-height: 370px;
     }
 
+    #trusted_companies a {
+        text-decoration: none;
+        border: none;
+    }
+
+    #trusted_companies a:hover {
+        opacity: .6;
+    }
+
     .default_button {
         font-family: Catamaran-SemiBold;
         font-style: normal;
         line-height: 1.2;
         text-decoration: none;
-        vertical-align: center;
-        padding-top: 14px;
+        padding-top: 17px;
         height: 60px;
         min-width: 200px;
         border: none;
@@ -250,7 +264,17 @@ through the people they trust.</p>
         top: 200px;
     }
 
-    @media screen and (max-width: 500px) {
+    footer {
+        background-color: #37AFC9;
+        color: #fff;
+    }
+
+    footer a, footer h2 {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    @media screen and (max-width: 575px) {
         .default_button {
             font-size: 18px;
         }
@@ -260,7 +284,7 @@ through the people they trust.</p>
             margin-bottom: 5px !important;
         }
 
-        .col-sm-6 .button-wrapper {
+        .col-sm-5, .col-sm-6 .button-wrapper {
             text-align: center;
         }
 
