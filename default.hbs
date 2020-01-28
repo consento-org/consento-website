@@ -119,8 +119,8 @@
 
     .navbar {
         opacity: 1;
-        transition: font-size 0.5s ease, height 0.5s ease;
-        height: 90px;
+        transition: font-size 0.5s ease, max-height 0.5s ease;
+        max-height: 100%;
         font-size: 1em;
         box-shadow: 0px 3px rgb(243, 241, 241)
     }
@@ -147,7 +147,7 @@
     @media screen and (min-width: 995px) {
         .navbar-shrink {
             font-size: 0.7em;
-            height: 50px;
+            max-height: 50px;
         }
     }
 </style>
