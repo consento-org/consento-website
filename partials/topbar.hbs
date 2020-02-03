@@ -1,24 +1,26 @@
 <nav id="top-bar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-    <header class="major" id="header">
-        <a href="{{@site.url}}" class="{{#if @site.logo}}image{{/if}}">{{#if @site.logo}}<img src="/../assets/images/consento-with-text.png" class="img-fluid navbar-brand " alt="{{@site.title}}" />{{/if}}</a>
-        {{!-- <section class="tagline">{{@site.description}}</section> --}}
-    </header>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div id="menu" class="col-sm-12">
-            <ul class="navbar-nav mr-auto links">
-                {{#if @site.navigation}}
-                    {{navigation}}
-                {{/if}}    
-                <li class="nav-item">
-                    <a href="https://github.com/consento-org/mobile/releases/tag/v1.0.0" target="_blank" class="btn btn-primary download-btn" role="button">Download</a>
-                </li>
-            </ul>
+    <div class="container">
+        <header class="major" id="header">
+            <a href="{{@site.url}}" class="{{#if @site.logo}}image{{/if}}">{{#if @site.logo}}<img src="/../assets/images/consento-with-text.png" class="img-fluid navbar-brand " alt="{{@site.title}}" />{{/if}}</a>
+            {{!-- <section class="tagline">{{@site.description}}</section> --}}
+        </header>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="menu" class="col-sm-12">
+                <ul class="navbar-nav mr-auto links">
+                    {{#if @site.navigation}}
+                        {{navigation}}
+                    {{/if}}    
+                    <li class="nav-item">
+                        <a href="https://github.com/consento-org/mobile/releases/tag/v1.0.0" target="_blank" class="btn btn-primary download-btn" role="button">Download</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-  </div>
+    </div>
 </nav>
 
 <style>
