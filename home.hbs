@@ -1,63 +1,69 @@
 {{!< default}}
 {{#is "home"}}{{/is}}
 
-<section id="consento_home">
-    <div class="container">
+<section id="consento_home" class="">
+    <div id='intro' class="container">
+         <h1 class="mt-5 text-center">Data privacy 
+    for humans, 
+    by humans.</h1>
         <div class="row">
-            <div class="col-sm-5">
-                <h1 class="mt-5">Data privacy 
-for humans, 
-by humans.</h1>
-                <p class="mt-5 mb-5">A good digital society is not where people have to adapt to technology, but where we can habdle our digital lives the same way as we have learned to do in real life.
+            {{!-- <div class="d-flex flex-wrap"> --}}
+                <div class="col-sm-5 order-2 order-sm-1">
+                    <p class="mt-5 mb-4">A good digital society is not where people have to adapt to technology, but where we can habdle our digital lives the same way as we have learned to do in real life.
 
-You think you already know a lot about how to handle data privacy?</p>
-                <div class="button-wrapper">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe49RVN1ZCCTAyic0yg5fNI5WKEQl_v8BUmsG4tCjTtuagENg/viewform" target="_blank" class="btn btn-primary default_button mt-5" role="button">Test your privacy level</a>
-                </div>            
-            </div>
-            <div class="col-sm-7">
-                <img class="img-fluid" src="{{asset "/images/hero.png"}}" />
-            </div>
+    You think you already know a lot about how to handle data privacy?</p>
+                    <div class="button-wrapper mb-1">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe49RVN1ZCCTAyic0yg5fNI5WKEQl_v8BUmsG4tCjTtuagENg/viewform" target="_blank" class="btn btn-primary default_button" role="button">Test your privacy level</a>
+                    </div>            
+                </div>
+                <div class="col-sm-7 order-1 order-sm-2">
+                    <img class="img-fluid" src="{{asset "/images/hero.png"}}" />
+                </div>
+            {{!-- </div> --}}
         </div>
     </div>
-    <div class="container">
+    <div class="border-top my-3"></div>
+    <div id='solution' class="container background-blue">
+        <h2 class="mt-5 mb-3 text-center">Our solution</h2>
         <div class="row">
-            <div class="col-sm-6">
-                <img class="img-fluid" src="{{asset "/images/illustration-00-app.png"}}" style="max-width: 80%;"/>
-            </div>
-            <div class="col-sm-6 text-right">
-                <h2 class="mt-5 mb-5">Our solution</h2>
-                <p class="extra-spacing">An app for individuals and organizations to handle their confidential data 
-through the people they trust.</p>
-                <div class="button-wrapper">
-                    <a href="/mailform/" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Be the first to use it</a>
+                <div class="col-sm-6 mt-3">
+                    <img class="img-fluid" src="{{asset "/images/illustration-00-app.png"}}" style="max-width: 80%;" />
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p class="extra-spacing">An app for individuals and organizations to handle their confidential data 
+    through the people they trust.</p>
+                    <div class="button-wrapper">
+                        <a href="/mailform/" target="_blank" class="btn btn-primary extra-spacing default_button mt-4" role="button">Be the first to use it</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </br>
+    <div class="border-top my-3"></div>
     <div class="container">
+        <h2 class="mb-2 text-center">The technology</h2>
         <div id="tech" class="row mt-5 mb-5">
-            <div class="col-sm-6">
-                <h2 class="mb-2">The technology</h2>
-                <p class="mb-2">A lot of encryption, and a bit of Shamir’s secret.</p>
-                <p class="extra-spacing">Read more about our white paper here, and join us in this great adventure on Git.</p>
-                <div class="align-items-bottom mt-5 text-center">
-                    <a href="https://github.com/consento-org/" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Git</a>
-                    <a href="https://keybase.io/team/consento" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Keybase</a>
+            {{!-- <div class="d-flex flex-wrap"> --}}
+                <div class="col-sm-6 order-2 order-sm-1">
+                    <p class="mb-2">A lot of encryption, and a bit of Shamir’s secret.</p>
+                    <p class="extra-spacing">Read more about our white paper here, and join us in this great adventure on Git.</p>
+                    <div class="align-items-bottom mt-2 text-center">
+                        <a href="https://github.com/consento-org/" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Git</a>
+                        <a href="https://keybase.io/team/consento" target="_blank" class="btn btn-primary extra-spacing default_button mt-5" role="button">Keybase</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <pre style="height: 100%;">
-                    <code style="height: 100%;">&lt;p&gt;Sample text here...&lt;/p&gt;
-&lt;p&gt;And another line of sample text here...&lt;/p&gt;
-&lt;p&gt;THis is Consento.&lt;/p&gt;
-                    </code>
-                </pre>
-            </div>
+                <div class="col-sm-6 order-1 order-sm-2">
+                    <pre style="height: 100%;">
+                        <code >&lt;p&gt;Consento...&lt;/p&gt;
+    &lt;p&gt;Built for your privacy...&lt;/p&gt;
+    &lt;p&gt;THis is Consento.&lt;/p&gt;
+                        </code>
+                    </pre>
+                </div>
+            {{!-- </div> --}}
         </div>
     </div>
-    </br>
+    <div class="border-top my-3"></div>
     <div class="container">
         <div class="row pt-5 mt-5 mb-5 pt-5">
             <div class="col-sm-12 text-center">
@@ -66,8 +72,8 @@ through the people they trust.</p>
         </div>
     </div>
     <div class="container">
-        <div id="how_it_works" class="row align-items-center text-center mt-5 mb-5">
-            <div class="row align-items-center mt-5 mb-5">
+        <div id="how_it_works" class="row align-items-center text-center mb-1">
+            <div class="row align-items-center mt-3 mb-5">
                 <div class="col-sm-3">
                     <h3 class="mb-3">Encryption</h3>
                     <img class="img-fluid mb-3" src="{{asset "images/04-how-to-1.png"}}" />
@@ -91,33 +97,39 @@ through the people they trust.</p>
             </div>
         </div>
     </div>
+    <div class="border-top my-3"></div>
     <div class="container">
+        <h3 class="mt-5 text-center">Co-ownership of confidential data.</h3>
         <div class="row mt-5 mb-5 align-items-center">
-            <div class="col-sm-6">
-                <img class="img-fluid" src="{{asset "images/01-general-public-550x620.png"}}" />
-            </div>
-            <div class="col-sm-6">
-                <h3 class="mt-5">Co-ownership of confidential data.</h3>
-                <p class="mt-5">When you’re far from home, Consento enables you to keep all your travel documents backuped and encrypted. No one can access these documents without combining the 3 parts of the key. No password required. </p>
-                <p class="mt-5">Just paired devices.</p>
-            </div>
+            {{!-- <div class="d-flex flex-wrap"> --}}
+                <div class="col-sm-6">
+                    <img class="img-fluid" src="{{asset "images/01-general-public-550x620.png"}}" />
+                </div>
+                <div class="col-sm-6">
+                    <p class="mt-5">When you’re far from home, Consento enables you to keep all your travel documents backuped and encrypted. No one can access these documents without combining the 3 parts of the key. No password required. </p>
+                    <p class="mt-5">Just paired devices.</p>
+                </div>
+            {{!-- </div> --}}
         </div>
     </div>
+    <div class="border-top my-3"></div>
     <div class="container">
+        <h3 class="mt-5 text-center">Data integrity across organizations.</h3>
         <div class="row mt-5 mb-5 align-items-center">
-            <div class="col-sm-6">
-                <h3 class="mt-5">Data integrity across organizations.</h3>
+            {{!-- <div class="d-flex flex-wrap"> --}}
+            <div class="col-sm-6 order-2 order-sm-1">
                 <p class="mt-5">When you are asked to take care of confidential of your client, Consento enables you to backup encrypted on paired devices, without the need to share the password via email, nor rely on central cloud services.</p>
                 <p class="mt-5">Just shared responsibility.</p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 mt-5 order-1 order-sm-2">
                 <img class="img-fluid" src="{{asset "images/02-office-550x620.png"}}" />
             </div>
+            {{!-- </div> --}}
         </div>
     </div>
-    
+    <div class="border-top my-3"></div>
     <div class="container">
-        <div class="row mt-5 mb-5 pt-5">
+        <div class="row mb-5 pt-5">
             <div class="col-sm-12 text-center">
                 <h2>Our values</h2>
             </div>
@@ -156,14 +168,15 @@ through the people they trust.</p>
             </div>
         </div>
     </div>
-    <div class="container mb-5 mt-5">
+    <div class="border-top my-3"></div>
+    <div id="roadmap" class="container mb-5">
+        <h2 class="mt-5 text-center">Consento roadmap</h2>
         <div class="row">
             <div class="col-sm-6">
                 <img class="img-fluid" src="{{asset "images/hero.png"}}" />
             </div>
             <div class="col-sm-6">
-                <h2 class="mb-5 mt-5">Consento roadmap</h2>
-                <p class="mb-3 extra-spacing">Consento is proudly part of the LEDGER program. </p>
+                <p class="mt-5 extra-spacing" style="padding-top: 2em;">Consento is proudly part of the LEDGER program. </p>
                 <p class="mb-3">Currently working on the MVP.</p>
                 <p class="mb-3">Want to be among the first to test Consento?</p>
                 <div class="button-wrapper">
@@ -172,10 +185,12 @@ through the people they trust.</p>
             </div>
         </div>
     </div>
+    
+    </div>
 </section>
 <style>
     #consento_home {
-        margin-top: 155px;
+        margin-top: 140px;
     }
 
     #consento_home p {
@@ -191,7 +206,7 @@ through the people they trust.</p>
     #wrapper {
         overflow: auto;
     }
-
+    
     #how_it_works .col-sm-3 {
         min-height: 370px;
     }
@@ -209,7 +224,7 @@ through the people they trust.</p>
         font-family: Catamaran-SemiBold;
         font-style: normal;
         line-height: 1.2;
-        text-decoration: none;
+        text-decoration: none;        
         padding-top: 17px;
         height: 60px;
         min-width: 200px;
@@ -246,19 +261,22 @@ through the people they trust.</p>
         color: #fff;
     }
 
-    @media screen and (max-width: 575px) {
+    {{!-- .background-blue {
+        background-color: rgba(55,175,201,0.5);
+    } --}}
 
+    @media screen and (max-width: 575px) {
         .col-sm-6 h1, .col-sm-6 h2, .col-sm-6 h3, .col-sm-6 p {
             margin-top: 25px !important;
             margin-bottom: 5px !important;
         }
 
-        .col-sm-5, .col-sm-6 .button-wrapper {
+        .col-sm-5, .col-sm-6, .button-wrapper {
             text-align: center;
         }
 
         .text-right {
-            text-align: initial !important;
+            text-align: center !important;
         }
     }
 
@@ -266,5 +284,49 @@ through the people they trust.</p>
         #how_it_works p {
             text-align: left;
         }
+        
     }
+
+    @media screen and (min-width: 768px) {
+        #intro img {
+            margin-top: -5em !important;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        #intro .default_button {
+            margin-top: 8em !important;
+        }
+
+        #solution .default_button {
+            margin-top: 7em !important;
+        }
+
+        #roadmap .default_button {
+            margin-top: 6em !important;
+        }
+
+        #roadmap img {
+            margin-top: -4em !important;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        #intro .default_button {
+            margin-top: 17em !important;
+        }
+
+        #solution .default_button {
+            margin-top: 11em !important;
+        }
+
+        #roadmap .default_button {
+            margin-top: 16em !important;
+        }
+
+        #roadmap img {
+            margin-top: -4em !important;
+        }
+    }
+    
 </style>

@@ -57,19 +57,9 @@
 
 </body>
 </html>
-
-<script>
-    $(window).scroll(function(e) {
-        let scroll = $(window).scrollTop();
-        let currentScrollpos = window.pageYOffset;
-        if (currentScrollpos > 40) {
-            $('.navbar').addClass("navbar-shrink");
-        } else {
-            $('.navbar').removeClass("navbar-shrink");
-        }
-    });
-</script>
 <style>
+    html, body { overflow-x: hidden; }
+    
     @font-face {
         font-family:'Catamaran-SemiBold';
         font-style:normal;
@@ -142,12 +132,5 @@
     footer a, footer h2 {
         text-decoration: none;
         color: #fff;
-    }
-
-    @media screen and (min-width: 995px) {
-        .navbar-shrink {
-            font-size: 0.7em;
-            max-height: 50px;
-        }
     }
 </style>
