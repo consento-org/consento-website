@@ -54,7 +54,7 @@
     <div id="trusted_companies"  class="row">
         <div class="col-sm-3 col-md-3 text-center">
           <a href="https://ledgerproject.eu" target="_blank">
-            <img style="max-height: 80px;" class="img-fluid" src="{{asset "images/ngi-white@2x.png"}}" />
+            <img style="max-height: 80px;" class="img-fluid mt-3" src="{{asset "images/ngi-white@2x.png"}}" />
           </a>
         </div>
 
@@ -63,7 +63,7 @@
         </div>
         
         <div class="col-sm-3 col-md-3 text-center">
-          <img style="max-height: 80px" class="img-fluid" src="{{asset "images/europe@2x.png"}}" />  
+          <img style="max-height: 80px" class="img-fluid mt-3" src="{{asset "images/europe@2x.png"}}" />  
         </div>
       
     </div>
@@ -126,7 +126,12 @@
     .icons > li > a {
         width: 15px;
     }
-
+    
+    @media screen and (max-width: 578px) {
+      .footer-copyright {
+        margin-top: 15px;
+      }
+    }
     @media screen and (max-width: 991px) {
         .header-icons {
             text-align: left !important;

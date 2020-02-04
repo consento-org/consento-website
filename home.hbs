@@ -1,10 +1,8 @@
 {{!< default}}
 {{#is "home"}}{{/is}}
-
-<section id="consento_home" class="">
+<section id="consento_home">
     <div id='intro' class="container">
         <div class="row">
-            {{!-- <div class="d-flex flex-wrap"> --}}
                 <div class="col-sm-12">
                     <h1 class="mt-5 col-md-4 col-sm-12">Data privacy 
     for humans, 
@@ -21,12 +19,10 @@
                 <div class="col-sm-7 order-1 order-sm-2">
                     <img class="img-fluid" src="{{asset "/images/hero.png"}}" />
                 </div>
-            {{!-- </div> --}}
         </div>
     </div>
-    <div class="border-top my-3"></div>
-    <div id='solution' class="container background-blue">
-        <div class="row">
+    <div id='solution' class="container">
+        <div class="row mt-5">
                 <div class="col-sm-12 mt-5">
                     <h2 class="mt-5 col-md-offset-4 col-sm-12 text-right">Our solution</h2>
                 </div>
@@ -41,12 +37,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
     </div>
-    <div class="border-top my-3"></div>
     <div class="container">
-        <div id="tech" class="row mt-5 mb-5">
-            {{!-- <div class="d-flex flex-wrap"> --}}
+        <div id="tech" class="row mt-5">
                 <div class="col-sm-12 mt-5">
                     <h2 class="mt-5 col-md-5 col-sm-12">The technology</h2>
                 </div>
@@ -54,8 +48,8 @@
                     <p class="mt-5">A lot of encryption, and a bit of Shamir’s secret.</p>
                     <p>Read more about our white paper here, and join us in this great adventure on Git.</p>
                     <div class="align-items-bottom mt-2 mr-2">
-                        <a href="https://github.com/consento-org/" target="_blank" class="btn btn-primary dual extra-spacing default_button mt-5 ml-0 mr-4" role="button">Source Code</a>
-                        <a href="https://keybase.io/team/consento" target="_blank" class="btn btn-primary dual extra-spacing default_button mt-5" role="button">Chat Channel</a>
+                        <a href="https://github.com/consento-org/" target="_blank" class="btn btn-primary dual extra-spacing default_button mt-3 ml-0" role="button">Source Code</a>
+                        <a href="https://keybase.io/team/consento" target="_blank" class="btn btn-primary dual extra-spacing default_button mt-3" role="button">Chat Channel</a>
                     </div>
                 </div>
                 <div class="col-sm-6 order-1 order-sm-2">
@@ -67,18 +61,17 @@
                     </pre>
                 </div>
             {{!-- </div> --}}
-        </div>
+        
     </div>
-    <div class="border-top my-3"></div>
     <div class="container">
-        <div class="row pt-5 mt-5 mb-5 pt-5">
-            <div class="col-sm-12 text-center">
+        <div class="row pt-5 mt-5 mb-5">
+            <div class="col-sm-12 mt-5 text-center">
                 <h2>How does it work</h2>
             </div>
         </div>
     </div>
     <div class="container">
-        <div id="how_it_works" class="row align-items-center text-center mb-1">
+        <div id="how_it_works" class="text-center mb-1">
             <div class="row align-items-center mt-3 mb-5">
                 <div class="col-sm-6 col-md-3">
                     <h3 class="mb-3">Encryption</h3>
@@ -103,9 +96,8 @@
             </div>
         </div>
     </div>
-    <div class="border-top my-3"></div>
     <div class="container">
-        <div id="co-op" class="row mt-5 mb-5">
+        <div id="co-op" class="row mt-5">
             <div class="col-sm-12 offset-sm-1 mt-5">
                 <h3 class="mt-5 col-sm-4 offset-sm-5">Co-ownership of confidential data.</h3>
             </div>
@@ -118,9 +110,8 @@
             </div>
         </div>
     </div>
-    <div class="border-top my-3"></div>
     <div class="container">
-        <div id="integrity" class="row mt-5 mb-5">
+        <div id="integrity" class="row mt-5">
             <div class="col-sm-12 mt-5">
                 <h3 class="mt-5 col-md-6 col-sm-12">Data integrity across organizations.</h3>
             </div>
@@ -133,17 +124,16 @@
             </div>
         </div>
     </div>
-    <div class="border-top my-3"></div>
     <div class="container">
-        <div class="row mb-5 pt-5">
-            <div class="col-sm-12 text-center">
+        <div class="row mt-5 mb-5 pt-5">
+            <div class="col-sm-12 mt-5 text-center">
                 <h2>Our values</h2>
             </div>
         </div>
     </div>
     <div class="container">
         <div id="icon_area" class="mb-5">
-            <div class="row mt-5 text-center">
+            <div class="row text-center">
                 <div class="col-md-4 mt-3">
                     <img class="img-fluid mb-3" src="{{asset "images/icons/icon_lock.png"}}" />
                     <h3 class="mb-3">Privacy by Design</h3>
@@ -174,7 +164,6 @@
             </div>
         </div>
     </div>
-    <div class="border-top my-3"></div>
     <div id="roadmap" class="container mb-5">
         <div class="row">
             <div class="col-sm-12 offset-sm-1 mt-5">
@@ -194,10 +183,8 @@
             </div>
         </div>
     </div>
-    
-    </div>
 </section>
-<style>
+<style lang="sass">
 
     .default_button {
         font-family: Catamaran-SemiBold;
@@ -234,6 +221,7 @@
         max-width: 182px;
         height: 53px;
         padding-top: 10px;
+        margin-right: 5px;
     }
 
     #icon_area img, #trusted_companies img {
@@ -269,8 +257,6 @@
         margin-top: 5.5em;
     }
 
-    
-
     .bottom_button {
         position: relative;
         top: 200px;
@@ -287,6 +273,9 @@
     }
 
     @media screen and (max-width: 575px) {
+        .default_button {
+            width: 100%;
+        }
         .col-sm-6 h1, .col-sm-6 h2, .col-sm-6 h3, .col-sm-6 p {
             margin-top: 25px !important;
             margin-bottom: 5px !important;
@@ -298,6 +287,22 @@
 
         .text-right {
             text-align: center !important;
+        }
+         #intro h1, #tech h2, #integrity h3 {
+            padding-left: inherit;
+        }
+
+        #solution h2 {
+            padding-right: inherit;
+        }
+        #consento_home, #intro, 
+        #tech, #integrity, #co-op {
+            text-align: center;    
+        }
+
+        .dual {
+            max-width: 100%;
+            margin-right: 0px;
         }
     }
 
@@ -320,14 +325,6 @@
         #solution img, #roadmap img {
             margin-top: -9em !important;
         }
-    }
-
-    @media screen and (min-width: 992px) {
-        
-    }
-
-    @media screen and (min-width: 1200px) {
-        
     }
     
 </style>
