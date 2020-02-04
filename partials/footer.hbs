@@ -1,7 +1,7 @@
 <footer class="page-footer font-small blue pt-4">
   <div class="container">
     <div class="container text-center text-md-left">
-      <div class="row">
+      <div class="row text-center">
         <div class="col-md-4 mt-md-0 mt-3">
           <h2 class="mb-4">Contact us</h2>
           <ul class="list-unstyled">
@@ -22,13 +22,13 @@
           <h2 class="mb-4">Develop</h2>
           <ul class="list-unstyled">
             <li>
-              <a href="https://github.com/consento-org/" target="_blank">Git</a>
+              <a href="https://github.com/consento-org/" target="_blank">Github Repository</a>
             </li>
             <li>
-              <a href="https://keybase.io/team/consento" target="_blank">Keybase</a>
+              <a href="https://keybase.io/team/consento" target="_blank">Keybase Chat</a>
             </li>
             <li>
-              <p>White Paper upcoming.</p>
+              White Paper upcoming.
             </li>
           </ul>
         </div>
@@ -36,14 +36,15 @@
           <h2 class="mb-4">About</h2>
           <ul class="list-unstyled">
             <li>
-              <a href="https://keybase.io/team/consento">Team</a>
+              <a href="/team/">Team</a>
             </li>
             <li>
-              <a href="#!">About</a>
+              <a href="/about/">About</a>
             </li>
-            {{!-- <li>
-              <a href="{{@site.url}}/blog/rss/">Blog</a>
-            </li> --}}
+            <li>
+              {{!-- <a href="{{@site.url}}/blog/rss/">Blog</a> --}}
+              <a href="/supporters/">Supporters</a>
+            </li>
           </ul>
 
         </div>
@@ -51,16 +52,18 @@
     </div> 
     
     <div id="trusted_companies"  class="row">
-        <div class="col-sm-6">
-          <p style="padding-left: 13px;">This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268.</p>
-        </div>
-        <div class="col-sm-4 col-md-3">
+        <div class="col-sm-3 col-md-3 text-center">
           <a href="https://ledgerproject.eu" target="_blank">
-            <img style="max-width: 170px; padding-top: 20px;" class="img-fluid" src="{{asset "images/ngi.svg"}}" />
+            <img style="max-height: 80px;" class="img-fluid mt-3" src="{{asset "images/ngi-white@2x.png"}}" />
           </a>
         </div>
-        <div class="col-sm-2 col-md-3">
-          <img class="img-fluid" src="{{asset "images/eu-flag.png"}}" />  
+
+        <div class="col-sm-6 col-md-6 text-center">
+          <p style="color: white; padding-left: 13px;">This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268.</p>
+        </div>
+        
+        <div class="col-sm-3 col-md-3 text-center">
+          <img style="max-height: 80px" class="img-fluid mt-3" src="{{asset "images/europe@2x.png"}}" />  
         </div>
       
     </div>
@@ -84,6 +87,9 @@
 </footer>
 
 <style>
+  .page-footer h2 {
+    font-size: 36px;
+  }
   .page-footer a {
     font-family: WorkSans-Regular;
     border-bottom: none;
@@ -120,7 +126,12 @@
     .icons > li > a {
         width: 15px;
     }
-
+    
+    @media screen and (max-width: 578px) {
+      .footer-copyright {
+        margin-top: 15px;
+      }
+    }
     @media screen and (max-width: 991px) {
         .header-icons {
             text-align: left !important;
