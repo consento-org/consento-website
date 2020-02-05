@@ -24,7 +24,8 @@
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "main/css/main.css"}}" />
-
+    <link rel="stylesheet" type="text/css" href="{{asset "main/css/bootstrap.min.css"}}" />
+    
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
@@ -32,18 +33,14 @@
 <body class="is-preload {{body_class}}">
 
     <div id="wrapper">
-        <main id="main">
-            <div class="inner">
+        <main id="main"> 
+                {{> topbar}}
 
                 {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
                 {{{body}}}
+                {{> footer}}
 
-            </div>
         </main>
-
-        {{!-- The left sidebar - partials/sidebar.hbs --}}
-        {{> sidebar}}
-
     </div>
 
     {{!-- Theme Scripts --}}
@@ -52,10 +49,113 @@
     <script src="{{asset "main/js/breakpoints.min.js"}}"></script>
     <script src="{{asset "main/js/util.js"}}"></script>
     <script src="{{asset "main/js/main.js"}}"></script>
-
+    <script src="{{asset "main/js/bootstrap.min.js"}}"></script>
+    <script src="{{asset "main/js/popper.min.js"}}"></script>
     {{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
     it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
 
 </body>
 </html>
+<style>
+    html, body { overflow-x: hidden; }
+    
+    @font-face {
+        font-family:'Catamaran-SemiBold';
+        font-style:normal;
+        src:local("Catamaran-SemiBold"),url('/assets/main/fonts/Catamaran-SemiBold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'WorkSans-Regular';
+        src: url('/assets/main/fonts/WorkSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'WorkSans-SemiBold';
+        src: url('/assets/main/fonts/WorkSans-SemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'WorkSans-ExtraBold';
+        src: url('/assets/main/fonts/WorkSans-ExtraBold.ttf') format('truetype'); /* Safari, Android, iOS */
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Catamaran-ExtraBold';
+        src: url('/assets/main/fonts/Catamaran-ExtraBold.ttf') format('truetype'); /* Safari, Android, iOS */
+        font-style: normal;
+    }
+
+    h1 {
+        font-family: 'Catamaran-SemiBold';
+        font-size: 60px;
+        line-height: 72px;
+        color: rgba(45,45,45,0.87);
+    }
+    h2 {
+        font-family: 'Catamaran-ExtraBold';
+        font-size: 48px;
+        color: rgba(15,15,15,0.87);
+    }
+
+    h3 {
+        font-family: 'WorkSans-SemiBold';
+        font-size: 36px;
+        color: rgba(0,0,0,0.87);
+    }
+    
+    h4, h5, h6 {
+        font-family: 'WorkSans-SemiBold';
+        color: #2B2B2B;
+    }
+
+    p {
+        font-family: 'WorkSans-Regular';
+        font-size: 21px;
+        line-height: 27px;
+        color: rgba(0,0,0,0.87)
+    }
+    
+    .consento-blue {
+        color: #37afc9;
+    }
+
+    .navbar {
+        max-height: 100%;
+    }
+
+    header.content {
+        padding-top: 9em;
+    }
+
+    .page-about h2, .page-team h2, .page-supporters h2 {
+        margin-top: 2em;
+        margin-bottom: 1.3em;
+    }
+
+    .page-about h3,.page-about h4,.page-about h5,.page-about p, 
+    .page-team h3,.page-team h4,.page-team h5,.page-team p,
+    .page-supporters h3,.page-supporters h4,.page-supporters h5,.page-supporters p {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    footer {
+        background-color: #37afc9;
+        color: #fff;
+    }
+
+    footer a, footer h2 {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    @media screen and (max-width: 736px) {
+        header.content {
+            padding-top: 1em;
+            margin-bottom: 3em;
+        }
+    }
+</style>

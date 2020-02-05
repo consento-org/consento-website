@@ -1,0 +1,136 @@
+<nav id="top-bar" class="navbar navbar-expand-md fixed-top navbar-light">
+    <div class="container">
+        <header class="major" id="header">
+            <a href="{{@site.url}}" class="{{#if @site.logo}}image{{/if}}">{{#if @site.logo}}<img src="/../assets/images/consento-with-text.png" class="img-fluid navbar-brand " alt="{{@site.title}}" />{{/if}}</a>
+            {{!-- <section class="tagline">{{@site.description}}</section> --}}
+        </header>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="menu" class="col-sm-12">
+                <ul class="navbar-nav mr-auto links">
+                    {{#if @site.navigation}}
+                        {{navigation}}
+                    {{/if}}    
+                    <li class="nav-item">
+                        <a href="https://github.com/consento-org/mobile/releases/tag/v1.0.0" target="_blank" class="btn btn-primary download-btn" role="button">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    a.image:hover img {
+        opacity: 0.6;
+        transform: scale(0.9);
+    }
+
+    .navbar-brand {
+        max-width: 12em;
+    }
+
+    #header {
+        border-bottom: none;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    #top-bar {
+        padding-top: 5px;
+        padding-bottom: 1px;
+        background-color: white;
+        box-shadow: 0 0 4px #00000038;
+    }
+
+    .download-btn {
+        font-family: Catamaran-SemiBold;
+        text-decoration: none;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        padding-left: 7px !important;
+        padding-right: 5px !important;
+        border-left: solid 1px #37AFC9;
+        border-top: solid 1px #37AFC9;
+        border-right: solid 1px #37AFC9;
+        border-bottom: solid 1px #37AFC9 !important;
+        background-color: rgba(0,0,0,0);
+        border-radius: 11px;
+        font-size: 24px;
+        color: #37AFC9 !important;
+    }
+
+    .download-btn:hover {
+        background-color: #37AFC9;
+        border-color:  #37AFC9;
+        opacity: 1;
+        color: white !important;
+    }
+    
+    #menu {
+        width: 100%;
+    }
+
+    #menu > ul {
+        float: right;
+    }
+    #menu > ul > li {
+        border-top: initial;
+        margin: initial;
+        padding-top: initial;
+        padding-bottom: initial;
+        padding-left: 1.5em;
+    }
+
+    .navbar-toggler {
+        height: 2.5em;
+        text-decoration: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.5em;
+        background-size: cover;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+    }
+
+    .show {
+        padding-bottom: 5px;
+    }
+    
+    @media screen and (max-width: 500px) {
+        .navbar-brand {
+            max-width: 9em;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        #menu {
+            text-align: -webkit-center;
+            text-align: center;
+        }
+        #menu .download-btn {
+            width: 200px;
+            display: inline-block;
+        }
+        #menu > ul {
+            float: initial;
+        }
+        #menu > ul > li {
+            padding-left: 0em;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        .navbar-brand {
+            max-width: 14em;
+        }
+    }
+</style>
