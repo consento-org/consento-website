@@ -1,4 +1,4 @@
-<footer class="page-footer font-small blue pt-4">
+<footer class="page-footer font-small blue pt-5">
   <div class="container">
     <div class="container text-center text-md-left">
       <div class="row text-center">
@@ -58,12 +58,14 @@
           </a>
         </div>
 
-        <div class="col-sm-6 col-md-6 text-center">
-          <p style="color: white; padding-left: 13px;">This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the LEDGER Project funded under grant agreement No825268.</p>
+        <div class="col-sm-6 col-md-6 pt-2 text-center">
+          <p>This project has received funding from the European Union’s <a href="https://ec.europa.eu/programmes/horizon2020/" target="_blank">Horizon 2020</a> research and innovation programme within the framework of the <a href="https://www.ngi.eu/about/ledger/" target="_blank">LEDGER Project</a> funded under grant agreement <a href="https://cordis.europa.eu/project/id/825268" target="_blank">No825268.</a></p>
         </div>
         
         <div class="col-sm-3 col-md-3 text-center">
-          <img style="max-height: 80px" class="img-fluid mt-3" src="{{asset "images/europe@2x.png"}}" />  
+          <a href="https://ec.europa.eu/info/" target="_blank">
+            <img style="max-height: 80px" class="img-fluid mt-3" src="{{asset "images/flag_yellow_low.jpg"}}" />  
+          </a>
         </div>
       
     </div>
@@ -89,18 +91,34 @@
 <style>
   .page-footer h2 {
     font-size: 36px;
+    font-family: 'Catamaran-SemiBold';
+    color: rgba(255, 255, 255, 0.87) !important;
   }
   .page-footer a {
-    font-family: WorkSans-Regular;
     border-bottom: none;
-    font-weight: 400;
-    font-style: normal;
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.87) !important;
+  }
+  .page-footer a:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    font-size: 23px;
+  }
+
+  .page-footer p {
+    font-family: WorkSans-Light;
+    font-size: 21px;
+    line-height: 27px;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.87) !important;
   }
 
   .page-footer li {
+    font-family: WorkSans-Light;
     padding-left: 0px;
+    font-size: 21px;
     padding-bottom: 10px;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.87) !important;
   }
 
   .icons {
