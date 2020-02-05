@@ -1,14 +1,19 @@
 {{#foreach navigation}}
-<li class="nav-{{slug}} nav-item {{#if current}}active{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+<li class="nav-{{slug}} nav-item menu-item {{#if current}}active{{/if}}"><a class="" href="{{url absolute="true"}}">{{label}}</a></li>
 {{/foreach}}
 
 
 <style>
-    .nav-item a {
-        font-family: 'WorkSans-ExtraBold';
+    .menu-item a {
+        font-family: 'WorkSans-Medium';
+        font-size: 21px;
+        line-height: 14px;
+        color: rgb(0, 0, 0);
     }
 
-     .nav-item a:hover {
+    .menu-item a:hover {
+        opacity: 0.7;
         text-decoration: none;
+        color: rgba(0, 0, 0, 0.726) !important;
     }
 </style>
