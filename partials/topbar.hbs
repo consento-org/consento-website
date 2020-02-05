@@ -1,4 +1,4 @@
-<nav id="top-bar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+<nav id="top-bar" class="navbar navbar-expand-md fixed-top navbar-light">
     <div class="container">
         <header class="major" id="header">
             <a href="{{@site.url}}" class="{{#if @site.logo}}image{{/if}}">{{#if @site.logo}}<img src="/../assets/images/consento-with-text.png" class="img-fluid navbar-brand " alt="{{@site.title}}" />{{/if}}</a>
@@ -35,12 +35,15 @@
 
     #header {
         border-bottom: none;
-        padding-top: 0.5em !important;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
 
     #top-bar {
         padding-top: 5px;
         padding-bottom: 1px;
+        background-color: white;
+        box-shadow: 0 0 4px #00000038;
     }
 
     .download-btn {
@@ -85,11 +88,21 @@
     .navbar-toggler {
         height: 2.5em;
         text-decoration: none;
+        border: none;
+        box-shadow: none;
     }
 
     .navbar-toggler-icon {
-        width: 1em;
+        width: 1.5em;
         background-size: cover;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+    }
+
+    .show {
+        padding-bottom: 5px;
     }
     
     @media screen and (max-width: 500px) {

@@ -53,15 +53,30 @@
                     </div>
                 </div>
                 <div class="col-sm-6 order-1 order-sm-2">
-                    <pre style="height: 100%;">
-                        <code >&lt;p&gt;Consento...&lt;/p&gt;
-    &lt;p&gt;Built for your privacy...&lt;/p&gt;
-    &lt;p&gt;THis is Consento.&lt;/p&gt;
+                    <pre>
+                        <code>confirm (accept: IHandshakeAcceptMessage): ICancelable<IHandshakeConfirmation> {
+      return cancelable<IHandshakeConfirmation, HandshakeInit>(function * () {
+        const secretKey = (yield crypto.computeSecret(this.confirmKey, Buffer.from(accept.token, 'base64'))) as Uint8Array
+        const bob = (yield createSender()) as ISender
+        const sendKey = (yield crypto.decrypt(secretKey, Buffer.from(accept.secret, 'base64'))) as IEncodable
+        if (!(sendKey instanceof Uint8Array)) {
+          throw Object.assign(new Error('Expected buffer in decrypted message'), { code: 'invalid-message' })
+        }
+        const sender = (yield createSenderFromSendKey(sendKey)) as ISender
+        return yield new HandshakeConfirmation({
+          connection: new Connection({
+            sender,
+            receiver: bob.newReceiver()
+          }),
+          // In case you are wondering why we not just simply return "bob" as sender
+          // but instead pass it in two messages: the reason is that without this step
+          finalMessage: bob.sendKey
+        })
+      }, this)
+    }
                         </code>
                     </pre>
                 </div>
-            {{!-- </div> --}}
-        
     </div>
     <div class="container">
         <div class="row pt-5 mt-5 mb-5">
@@ -73,22 +88,22 @@
     <div class="container">
         <div id="how_it_works" class="text-center mb-1">
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-sm-6 col-md-3">
+                <div class="fixed-block-height col-sm-6 col-md-6 col-lg-3">
                     <h3 class="mb-3">Encryption</h3>
                     <img class="img-fluid mb-2" src="{{asset "images/04-how-to-1.png"}}" />
                     <p>Strong encryption on the spot.</p>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="fixed-block-height col-sm-6 col-md-6 col-lg-3">
                     <h3 class="mb-3">Shared key</h3>
                     <img class="img-fluid mb-2" src="{{asset "images/04-how-to-2.png"}}" />
                     <p>Key split in unique parts & shared with people you trust.</p>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="fixed-block-height col-sm-6 col-md-6 col-lg-3">
                     <h3 class="mb-3">Unlocking</h3>
                     <img class="img-fluid mb-2" src="{{asset "images/04-how-to-3.png"}}" />
                     <p>'Consent' required to unlock.</p>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="fixed-block-height col-sm-6 col-md-6 col-lg-3">
                     <h3 class="mb-3">Private network</h3>
                     <img class="img-fluid mb-2" src="{{asset "images/04-how-to-4.png"}}" />
                     <p>Keep control over who has access.</p>
@@ -134,29 +149,31 @@
     <div class="container">
         <div id="icon_area" class="mb-5">
             <div class="row text-center">
-                <div class="col-md-4 mt-3">
+                <div class="col-md-6 mt-3">
                     <img class="img-fluid mb-3" src="{{asset "images/icons/icon_lock.png"}}" />
                     <h3 class="mb-3">Privacy by Design</h3>
                     <p>Consento provides 100% privacy.</p>
                 </div>
-                <div class="col-md-4 mt-3">
+                <div class="col-md-6 mt-3">
                     <img class="img-fluid mb-3" src="{{asset "images/icons/icon_empowerment.png"}}" />
                     <h3 class="mb-3">Empowerment</h3>
                     <p>Consento makes you keep control over our data.</p>
                 </div>
-                <div class="col-md-4 mt-3">
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 mt-3">
                     <img class="img-fluid mb-3" src="{{asset "images/icons/icon_human centric.png"}}" />
                     <h3 class="mb-3">Human centric</h3>
                     <p>Consento builds on trusted human relationship.</p>
                 </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4 offset-md-2 mt-3">
+                <div class="col-md-6 mt-3">
                     <img class="img-fluid mb-3" src="{{asset "images/icons/icon_transparency.png"}}" />
                     <h3 class="mb-3">Transparency</h3>
                     <p>Consento is 100% FOSS.</p>
                 </div>
-                <div class="col-md-4">
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
                     <img class="img-fluid mb-3 mt-3" src="{{asset "images/icons/icon_diversity.png"}}" />
                     <h3 class="mb-3">Diversity</h3>
                     <p>Consento empowers small businesses.</p>
@@ -203,6 +220,9 @@
 
     .default_button:hover {
         background-color: #9DE0EF;
+        border-color:  #37AFC9;
+        opacity: 1;
+        color: white !important;
     }
 
     #consento_home {
@@ -236,7 +256,7 @@
         overflow: auto;
     }
     
-    #how_it_works .col-md-3 {
+    .fixed-block-height {
         min-height: 388px;
     }
 
@@ -270,6 +290,13 @@
     footer a, footer h2 {
         text-decoration: none;
         color: #fff;
+    }
+
+    pre code {
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        padding: 20px;
     }
 
     @media screen and (max-width: 575px) {
@@ -322,7 +349,7 @@
             margin-top: 5em !important;
         }
 
-        #solution img, #roadmap img {
+        #solution img, #roadmap img, #tech pre {
             margin-top: -9em !important;
         }
     }
