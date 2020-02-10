@@ -188,4 +188,23 @@
         .navbar-brand {
             max-width: 9em;
         }
+	}
+	
+	@media screen and (max-width: 767px) {
+        #menu {
+            text-align: -webkit-center;
+            text-align: center;
+        }
+        #menu .download-btn {
+            width: 150px;
+            display: inline-block;
+            padding-left: initial;
+            padding-right: initial;
+        }
+        #menu > ul {
+            float: initial;
+        }
+        #menu > ul > li {
+            padding-left: 0em;
+        }
     }
