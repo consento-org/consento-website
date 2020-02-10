@@ -1,0 +1,21 @@
+.default_button {
+    font-family: Catamaran-SemiBold;
+    text-decoration: none;        
+    padding-top: 15px;
+    height: 60px;
+    width: 320px;
+    border: none;
+    border-radius: 11px;
+    background-color: #37AFC9;
+    box-shadow: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.87) !important;
+}
+
+.default_button:hover {
+    background-color: #9DE0EF;
+    border-color:  #37AFC9;
+    opacity: 1;
+    color: white !important;
+}
