@@ -102,3 +102,8 @@ pre code {
         text-align: center !important;
     }
 }
+@media screen and (min-width: 576px) {
+    #how_it_works p {
+        text-align: left;
+    }  
+}
