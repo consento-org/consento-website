@@ -53,3 +53,23 @@
 	  .svg-filler:hover > g {
 		fill: rgba(255,255,255,1);
 	  }
+
+	  @media screen and (max-width: 578px) {
+		.footer-copyright {
+		  margin-top: 15px;
+		}
+	  }
+	  @media screen and (max-width: 991px) {
+		  .header-icons {
+			text-align: left !important;
+		  }
+  
+		  #trusted_companies {
+			text-align: center;
+		  }
+	  }
+	  @media screen and (min-width: 1400px) {
+		  .header-icons .icons {
+			font-size: 21px;
+		  }
+	  }
