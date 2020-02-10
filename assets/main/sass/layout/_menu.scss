@@ -182,4 +182,10 @@
 	}
 	.show {
         padding-bottom: 5px;
+	}
+	
+	@media screen and (max-width: 500px) {
+        .navbar-brand {
+            max-width: 9em;
+        }
     }
