@@ -63,3 +63,17 @@
     position: relative;
     top: 200px;
 }
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+}
+
+@media screen and (max-width: 575px) {
+    .default_button {
+        width: 100%;
+    }
+    
+}
