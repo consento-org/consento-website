@@ -53,6 +53,28 @@
 	  .svg-filler:hover > g {
 		fill: rgba(255,255,255,1);
 	  }
+ 
+	  .icons {
+		display: inline-block;
+		margin-left: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 15px;
+	  }
+	
+	  .icons li {
+		font-size: 16px;
+	  }
+	
+	  .icons a:hover { 
+		color: rgba(255,255,255,1);
+		text-decoration: none;
+	  }
+	  
+	
+		.icons > li > a {
+			width: 15px;
+		}
 
 	  @media screen and (max-width: 578px) {
 		.footer-copyright {
