@@ -107,3 +107,14 @@ pre code {
         text-align: left;
     }  
 }
+@media screen and (min-width: 768px) {
+    #intro img, #co-op img, #integrity img {
+        margin-top: -18em !important;
+    }
+    #solution, #integrity, #roadmap {
+        margin-top: 5em !important;
+    }
+    #solution img, #roadmap img, #tech pre {
+        margin-top: -9em !important;
+    }
+}
