@@ -76,6 +76,21 @@
 			width: 15px;
 		}
 
+	  .footer-icons > li > a {
+		  width: 15px;
+	  }
+	  #trusted_companies a {
+        text-decoration: none;
+        border: none;
+		}
+
+	  #trusted_companies a:hover {
+		opacity: .6;
+	  }
+	  #icon_area img, #trusted_companies img {
+        max-height: 91px;
+      }
+
 	  @media screen and (max-width: 578px) {
 		.footer-copyright {
 		  margin-top: 15px;
