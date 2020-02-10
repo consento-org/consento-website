@@ -96,3 +96,15 @@
 			}
 		}
 	}
+	.menu-item a {
+        font-family: 'WorkSans-Medium';
+        font-size: 21px;
+        line-height: 14px;
+        color: rgb(0, 0, 0);
+    }
+
+    .menu-item a:hover {
+        opacity: 0.7;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.726) !important;
+    }
