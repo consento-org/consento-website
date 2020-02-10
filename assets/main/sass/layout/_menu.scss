@@ -149,4 +149,21 @@
 
     .download-btn:focus {
         outline: none;
+	}
+	
+    #menu {
+        width: 100%;
+    }
+
+    #menu > ul {
+        float: right;
+        text-transform: none;
+    }
+    #menu > ul > li {
+        border-top: initial;
+        margin: initial;
+        padding-top: initial;
+        padding-bottom: initial;
+        padding-left: 2.7em;
+        font-size: 21px;
     }
