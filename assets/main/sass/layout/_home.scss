@@ -83,5 +83,12 @@ pre code {
     .col-sm-5, .col-sm-6, .button-wrapper {
         text-align: center;
     }
+    #intro h1, #tech h2, #integrity h3 {
+        padding-left: inherit;
+    }
+
+    #solution h2 {
+        padding-right: inherit;
+    }
 
 }
