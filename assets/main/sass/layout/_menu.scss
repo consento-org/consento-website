@@ -207,4 +207,15 @@
         #menu > ul > li {
             padding-left: 0em;
         }
+	}
+	@media screen and (min-width: 768px) and (max-width: 992px) {
+        .download-btn {
+            width: 130px;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        #menu ul li {
+            padding-left: 1em;
+        }
     }
