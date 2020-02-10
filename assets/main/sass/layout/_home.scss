@@ -43,6 +43,23 @@
 #icon_area p {
     font-size: 24px;
 }
+
 #wrapper {
     overflow: auto;
+}
+
+.fixed-block-height {
+    min-height: 388px;
+}
+
+#how_it_works img {
+    width: 200px;
+}
+
+.extra-spacing {
+    margin-top: 5.5em;
+}
+.bottom_button {
+    position: relative;
+    top: 200px;
 }
