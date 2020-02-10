@@ -6,156 +6,93 @@
 
 /* Menu */
 
-#menu {
-	ul {
-		@include vendor('user-select', 'none');
-		list-style: none;
-		float: right;
-		text-transform: none;
-		li {
-			border-top: initial;
-			margin: initial;
-			padding-top: initial;
-			padding-bottom: initial;
-			padding-left: 2.7em;
-			font-size: 21px;
-		}
-
-		a, span {
-			border-bottom: 0;
-			cursor: pointer;
-			
-			&:hover {
-				color: _palette(accent);
-			}
-		}
-	}
-}
-.menu-item {
-	a {
-		font-family: 'WorkSans-Medium';
-		font-size: 21px;
-		line-height: 14px;
-		color: rgb(0, 0, 0);
-	}
-	& a:hover {
-		opacity: 0.7;
-		text-decoration: none;
-		color: rgba(0, 0, 0, 0.726) !important;
-	}
-}
-
-// a.image:hover img {
-#top-bar {
-	padding-top: 5px;
-	padding-bottom: 1px;
-	background-color: white;
-	box-shadow: 0 0 4px #00000038;
-	#header {
-		border-bottom: none;
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
-		.image {
-			&:hover 
-				> img {
-					opacity: 0.6;
-					transform: scale(0.9);
-				}	
-		}
-		.navbar-brand {
-			max-width: 12em;
-		}
-	}
-	.download-btn {
-		font-family: Catamaran-SemiBold !important;
-		text-decoration: none;
-		width: 150px;
-		line-height: 14px;
-		padding-top: 20px !important;
-		padding-bottom: 20px !important;
-		border-left: solid 1px #37AFC9;
-		border-top: solid 1px #37AFC9;
-		border-right: solid 1px #37AFC9;
-		border-bottom: solid 1px #37AFC9 !important;
-		background-color: rgba(0,0,0,0);
-		border-radius: 11px;
-		max-height: 60px;
-		height: 100%;
-		font-size: 24px;
-		color: #37AFC9 !important;
-
-		&:hover {
-			background-color: #37AFC9;
-			border-color:  #37AFC9;
-			opacity: 1;
-			color: white !important;
-		}
-		&:focus {
-			outline: none;
-		}
-	}
-	.navbar-toggler {
-		height: 2.5em;
-		text-decoration: none;
-		border: none;
-		box-shadow: none;
-		&:focus {
-			outline: none;
-		}
-		.navbar-toggler-icon {
-			width: 1.5em;
-			background-size: cover;
-		}
-	}
-	.show {
-		padding-bottom: 5px;
-	}
-}
-
-
-@media screen and (max-width: 500px) {
-	.navbar-brand {
-		max-width: 9em;
-	}
-}
-
-@media screen and (max-width: 767px) {
-	#menu {
-		text-align: -webkit-center;
-		text-align: center;
-		> ul {
-			float: initial;
-			> li {
-				padding-left: 0em;
-			}
-		}
-	}
-	.download-btn {
-		width: 150px;
-		display: inline-block;
-		padding-left: initial;
-		padding-right: initial;
-	} 
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-	.download-btn {
-		width: 130px;
-		padding-left: 15px !important;
-		padding-right: 15px !important;
-	}
-
 	#menu {
 		ul {
-			li {
-				padding-left: 1em;
+			@include vendor('user-select', 'none');
+			color: _palette(fg-bold);
+			font-family: _font(family-heading);
+			font-family: _font(weight-heading-alt);
+			letter-spacing: _font(kerning-heading);
+			list-style: none;
+			margin-bottom: 0;
+			padding: 0;
+			text-transform: uppercase;
+
+			a, span {
+				border-bottom: 0;
+				color: inherit;
+				cursor: pointer;
+				display: block;
+				font-size: 0.9em;
+				padding: 0.625em 0;
+
+				&:hover {
+					color: _palette(accent);
+				}
+
+				&.opener {
+					@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+					@include icon;
+					-webkit-tap-highlight-color: rgba(255,255,255,0);
+					position: relative;
+
+					&:before {
+						@include vendor('transition', (
+							'color #{_duration(transition)} ease-in-out',
+							'transform #{_duration(transition)} ease-in-out'
+						));
+						color: _palette(fg-light);
+						content: '\f078';
+						position: absolute;
+						right: 0;
+					}
+
+					&:hover {
+						&:before {
+							color: _palette(accent);
+						}
+					}
+
+					&.active {
+						& + ul {
+							display: block;
+						}
+
+						&:before {
+							@include vendor('transform', 'rotate(-180deg)');
+						}
+					}
+				}
+			}
+		}
+
+		> ul {
+			> li {
+				border-top: solid 1px _palette(border);
+				margin: 0.5em 0 0 0;
+				padding: 0.5em 0 0 0;
+
+				> ul {
+					color: _palette(fg-light);
+					display: none;
+					margin: 0.5em 0 1.5em 0;
+					padding-left: 1em;
+
+					a, span {
+						font-size: 0.8em;
+					}
+
+					> li {
+						margin: 0.125em 0 0 0;
+						padding: 0.125em 0 0 0;
+					}
+				}
+
+				&:first-child {
+					border-top: 0;
+					margin-top: 0;
+					padding-top: 0;
+				}
 			}
 		}
 	}
-}
-
-@media screen and (min-width: 1400px) {
-	.navbar-brand {
-		max-width: 14em;
-	}
-}
