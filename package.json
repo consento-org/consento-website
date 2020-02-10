@@ -17,8 +17,8 @@
         "zip": "gulp zip",
         "pretest": "gulp build",
         "test": "gscan .",
-        "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
+        "preship": "npm test",
+        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then git push --follow-tags; fi"
     },
     "author": {
         "name": "Martin Heidegger",
@@ -55,18 +55,19 @@
         }
     ],
     "devDependencies": {
-        "beeper": "^1.1.1",
-        "gscan": "^2.0.0",
-        "gulp": "4.0.0",
-        "gulp-livereload": "4.0.1",
+        "beeper": "^2.0.0",
+        "bootstrap": "^4.4.1",
+        "gscan": "^3.3.0",
+        "gulp": "^4.0.2",
+        "gulp-cli": "^2.2.0",
+        "gulp-livereload": "^4.0.2",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.4",
         "gulp-watch": "5.0.1",
-        "gulp-zip": "4.2.0",
-        "node-sass": "^4.10.0",
+        "gulp-zip": "^5.0.1",
         "jquery": "^3.4.1",
-        "popper.js":"^1.16.0",
-        "bootstrap": "^4.4.1"
+        "node-sass": "^4.13.1",
+        "popper.js": "^1.16.1"
     },
     "config": {
         "posts_per_page": 6
