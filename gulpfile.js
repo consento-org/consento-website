@@ -168,7 +168,7 @@ function imgCompress(done) {
         imagemin([
             imagemin.gifsicle({ interlaced: true }),
             imagemin.mozjpeg({ quality: 75, progressive: true }),
-            imageminPngquant({ speed: 5, strip: true, quality: [0.4, 0.6] }),
+            imageminPngquant({ speed: 5, strip: true, quality: [0.3, 1] }),
             imagemin.svgo()
         ], { verbose: true }),
         dest("."),
