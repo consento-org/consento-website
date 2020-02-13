@@ -1,0 +1,13 @@
+{
+    "name": "Consento icon",
+    "short_name": "Consento",
+    "start_url": ".",
+    "icons": [
+        {
+            "src": "/assets/images/logo-consento-192-android.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone"
+}
