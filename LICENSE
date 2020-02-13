@@ -1,10 +1,12 @@
-The Consento theme is a fork of the Editorial theme, which can be found at the end of this file.
+The Consento theme is a fork of the Editorial theme, which's license can be found at the end of this file.
 
-The Consento Logo and all other media is licensed under a
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
-(see here: https://creativecommons.org/licenses/by-nc-nd/4.0/) by the consento team (see below).
+Licenses for the images/assets:
 
-Copyright (c) 2019 Martin Heidegger, Marc Chataigner, Daniel Kastl, Tanja Rohlfs
+- [CC-BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+    - [Tanja Rohlfs](http://tanjarohlfs.de/)
+        - assets/images/illustrations/**/*
+    - [Georepublic](https://georepublic.info)
+        - assets/images/logo - filled.png
 
 ------- Original Editorial License --------
 
