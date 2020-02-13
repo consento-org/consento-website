@@ -1,5 +1,4 @@
 $(window).scroll(function(e) {
-    let scroll = $(window).scrollTop();
     let currentScrollpos = window.pageYOffset;
     let element = document.getElementById("top-bar");
 
