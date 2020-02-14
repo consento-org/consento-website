@@ -162,13 +162,12 @@ function imgFiles () {
 }
 
 function imgCompress(done) {
-    const firstPass = Object.keys(changeCache).length === 0
     pump([
         imgFiles(),
-        changedInPlace({ cache: changeCache, firstPass }),
+        changedInPlace({ cache: changeCache, firstPass: true }),
         imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 75, progressive: true}),
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
             imageminPngquant({ speed: 9, strip: true, quality: [0.2, 0.5] }),
             imagemin.svgo()
         ], { verbose: true }),
