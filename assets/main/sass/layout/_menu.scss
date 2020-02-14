@@ -119,7 +119,12 @@
 	#top-bar {
         padding-top: 5px;
         padding-bottom: 1px;
-        background-color: white;
+		background-color: white;
+		transition: box-shadow 1s;
+	}
+	.scroll_shadow {
+		box-shadow: 0 0 10px #00000038 !important;
+		transition: box-shadow 1s;
 	}
 	.download-btn {
         font-family: Catamaran-SemiBold !important;
