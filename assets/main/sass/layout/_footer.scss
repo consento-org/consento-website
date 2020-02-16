@@ -30,14 +30,14 @@
 		font-family: 'Catamaran-SemiBold';
 		color: rgba(255, 255, 255, 0.87) !important;
 	  }
-	  .page-footer a {
-		border-bottom: none;
-		text-decoration: none;
-		color: rgba(255, 255, 255, 0.87) !important;
-	  }
-	  .page-footer a:hover {
-		color: rgba(255, 255, 255, 1) !important;
-	  }
+	.page-footer a {
+	border-bottom: none;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.87);
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+		}
+	}
 	
 	  .page-footer p {
 		font-family: WorkSans-Light;
@@ -88,14 +88,16 @@
 	  .footer-icons > li > a {
 		  width: 15px;
 	  }
-	  #trusted_companies a {
-        text-decoration: none;
-        border: none;
+	#trusted_companies a {
+		text-decoration: none;
+		font-weight: bold;
+		border: none;
+		color: #F8D3D4;
+		&:hover {
+			opacity: .6;
+			color: #F1A8A8 !important;
 		}
-
-	  #trusted_companies a:hover {
-		opacity: .6;
-	  }
+	}
 	  #icon_area img, #trusted_companies img {
         max-height: 91px;
       }
