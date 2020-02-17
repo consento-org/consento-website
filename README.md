@@ -57,6 +57,20 @@ npm test
 Original template files and design by [@ajlkn](https://twitter.com/ajlkn)
 
 
+# Modify code block in Technology section
+
+If you need to modify the code block in the Technology section, take the following steps:
+
+1) Install @leichtgewicht/prism-cli using `npm install @leichtgewicht/prism-cli -g` or, if using `npx`, you can use `npx @leichtgewicht/prism-cli`
+
+2) Paste the code you want to show into a text file and save that file.
+
+3) run the following command: `npx @leichtgewicht/prism-cli -f {filename.extension} --html -l typescript`
+
+The `{filename.extension}` is the name of your file, such as `codeblock.ts`. `--html` is the tag used to generate the response as html code. `-l` is the language you want; in this case it would be typescript. 
+
+This will generate your codeblock using HTML code. It will include classes used in the [official prism templates.](https://github.com/PrismJS/prism/tree/master/themes) Just generate a new scss file and paste that css code in there.
+
 # Copyright & License
 
 Copyright (c) 2013-2019 [HTML5 UP](https://htmlup.net) & [Ghost Foundation](https://ghost.org) - This theme is licensed under both the [MIT and Creative Commons Attribution 3.0](LICENSE). Please note that the terms of the Creative Commons license require that you maintain the footer attribution to freely use this theme.
