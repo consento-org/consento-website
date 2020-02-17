@@ -23,7 +23,6 @@
 				color: inherit;
 				cursor: pointer;
 				display: block;
-				font-size: 0.9em;
 				padding: 0.625em 0;
 
 				&:hover {
@@ -78,10 +77,6 @@
 					margin: 0.5em 0 1.5em 0;
 					padding-left: 1em;
 
-					a, span {
-						font-size: 0.8em;
-					}
-
 					> li {
 						margin: 0.125em 0 0 0;
 						padding: 0.125em 0 0 0;
@@ -100,7 +95,10 @@
         font-family: 'WorkSans-Medium';
         font-size: 21px;
         line-height: 14px;
-        color: rgb(0, 0, 0);
+		color: rgb(0, 0, 0);
+		@media screen and (min-width: 768px) and (max-width: 920px) {
+			font-size: 17px;
+		}
     }
 
     .menu-item a:hover {
@@ -136,7 +134,7 @@
         border-radius: 11px;
         max-height: 60px;
         height: 100%;
-        font-size: 23px !important;
+        font-size: 23px;
 		color: #37AFC9 !important;
 		&:hover {
 			background-color: #37AFC9;
@@ -150,6 +148,9 @@
 		@media screen and (max-width: 767px) {
 			margin-top: 15px;
 			margin-bottom: 20px;
+		}
+		@media screen and (max-width: 992px) {
+			font-size: 1em;
 		}
     }
 
@@ -166,7 +167,7 @@
         margin: initial;
         padding-top: initial;
         padding-bottom: initial;
-        padding-left: 2.7em;
+        padding-left: 2em;
         font-size: 21px;
 	}
 	.navbar-toggler {
@@ -203,7 +204,7 @@
             text-align: -webkit-center;
             text-align: center;
         }
-        #menu .download-btn {
+        .download-btn {
             width: 150px;
             display: inline-block;
             padding-left: initial;
@@ -218,9 +219,7 @@
 	}
 	@media screen and (min-width: 768px) and (max-width: 992px) {
         .download-btn {
-            width: 130px;
-            padding-left: 15px !important;
-            padding-right: 15px !important;
+            width: 125px;
         }
 
         #menu ul li {
