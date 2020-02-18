@@ -53,29 +53,26 @@
                     </div>
                 </div>
                 <div class="col-sm-6 order-1 order-sm-2">
-                    <pre>
-                        <code>confirm (accept: IHandshakeAcceptMessage): ICancelable<IHandshakeConfirmation> {
-      return cancelable<IHandshakeConfirmation, HandshakeInit>(function * () {
-        const secretKey = (yield crypto.computeSecret(this.confirmKey, Buffer.from(accept.token, 'base64'))) as Uint8Array
-        const bob = (yield createSender()) as ISender
-        const sendKey = (yield crypto.decrypt(secretKey, Buffer.from(accept.secret, 'base64'))) as IEncodable
-        if (!(sendKey instanceof Uint8Array)) {
-          throw Object.assign(new Error('Expected buffer in decrypted message'), { code: 'invalid-message' })
-        }
-        const sender = (yield createSenderFromSendKey(sendKey)) as ISender
-        return yield new HandshakeConfirmation({
-          connection: new Connection({
-            sender,
-            receiver: bob.newReceiver()
-          }),
-          // In case you are wondering why we not just simply return "bob" as sender
-          // but instead pass it in two messages: the reason is that without this step
-          finalMessage: bob.sendKey
-        })
-      }, this)
-    }
-                        </code>
-                    </pre>
+                    <pre class="language-typescript"><span class="token function">confirm</span> <span class="token punctuation">(</span>accept<span class="token operator">:</span> IHandshakeAcceptMessage<span class="token punctuation">)</span><span class="token operator">:</span> ICancelable<span class="token operator"><</span>IHandshakeConfirmation<span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> cancelable<span class="token operator"><</span>IHandshakeConfirmation<span class="token punctuation">,</span> HandshakeInit<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> secretKey <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">yield</span> crypto<span class="token punctuation">.</span><span class="token function">computeSecret</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>confirmKey<span class="token punctuation">,</span> Buffer<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>accept<span class="token punctuation">.</span>token<span class="token punctuation">,</span> <span class="token string">'base64'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> Uint8Array
+        <span class="token keyword">const</span> bob <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">yield</span> <span class="token function">createSender</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> ISender
+        <span class="token keyword">const</span> sendKey <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">yield</span> crypto<span class="token punctuation">.</span><span class="token function">decrypt</span><span class="token punctuation">(</span>secretKey<span class="token punctuation">,</span> Buffer<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>accept<span class="token punctuation">.</span>secret<span class="token punctuation">,</span> <span class="token string">'base64'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> IEncodable
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>sendKey <span class="token keyword">instanceof</span> <span class="token class-name">Uint8Array</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">throw</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Expected buffer in decrypted message'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> code<span class="token operator">:</span> <span class="token string">'invalid-message'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">const</span> sender <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">yield</span> <span class="token function">createSenderFromSendKey</span><span class="token punctuation">(</span>sendKey<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> ISender
+        <span class="token keyword">return</span> <span class="token keyword">yield</span> <span class="token keyword">new</span> <span class="token class-name">HandshakeConfirmation</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          connection<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Connection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            sender<span class="token punctuation">,</span>
+            receiver<span class="token operator">:</span> bob<span class="token punctuation">.</span><span class="token function">newReceiver</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token comment">// In case you are wondering why we not just simply return "bob" as sender</span>
+          <span class="token comment">// but instead pass it in two messages: the reason is that without this step</span>
+          finalMessage<span class="token operator">:</span> bob<span class="token punctuation">.</span>sendKey
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
                 </div>
     </div>
     <div class="container">
