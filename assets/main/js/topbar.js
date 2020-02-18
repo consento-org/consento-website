@@ -3,7 +3,7 @@ function scrollShadow(scrollpos) {
     element.classList.toggle('scroll_shadow', scrollpos > 40);
 }
 
-window.onload = this.scrollShadow(window.pageYOffset);
+$(window).ready = this.scrollShadow(window.pageYOffset);
 
 $(window).scroll(function(e) {
     let currentScrollpos = window.pageYOffset;
