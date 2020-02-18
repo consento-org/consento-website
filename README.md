@@ -56,6 +56,19 @@ npm test
 
 Original template files and design by [@ajlkn](https://twitter.com/ajlkn)
 
+# Image compression and license attribution
+
+Image compression and license attribution is handled via the script gulpfile.js. 
+Node.js needs to be installed to write a command line to execute the script. 
+
+Run `npm i` in the terminal first
+And then `npm run dev img` to compress all images and write license attributes in their meta data. 
+
+To change or asign licenses open the LICENSE file and add a new line for a license as well as the directory to which this license applies (e.g: assets/images) 
+** = include all subfolders
+* = all data
+you can also use "* name" to write the license to all files containing a same word e.g "logo" 
+
 
 # Modify code block in Technology section
 
