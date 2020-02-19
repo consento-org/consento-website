@@ -1,14 +1,7 @@
-function scrollShadow(scrollpos) {
+const scrollShadow = function() {
     let element = document.getElementById("top-bar");
-    element.classList.toggle('scroll_shadow', scrollpos > 40);
+    element.classList.toggle('scroll_shadow', window.pageYOffset > 40);
 }
 
-const readyScroll = function() {
-    scrollShadow(window.pageYOffset)
-}
-
-$(document).ready(readyScroll);
-
-$(window).scroll(function(e) {
-    scrollShadow(window.pageYOffset);
-});
+$(document).ready(scrollShadow);
+$(window).scroll(scrollShadow);
