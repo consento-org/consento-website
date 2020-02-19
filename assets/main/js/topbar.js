@@ -3,9 +3,12 @@ function scrollShadow(scrollpos) {
     element.classList.toggle('scroll_shadow', scrollpos > 40);
 }
 
-$(document).ready(this.scrollShadow(window.pageYOffset));
+const readyScroll = function() {
+    scrollShadow(window.pageYOffset)
+}
+
+$(document).ready(readyScroll);
 
 $(window).scroll(function(e) {
-    let currentScrollpos = window.pageYOffset;
-    this.scrollShadow(currentScrollpos);
+    scrollShadow(window.pageYOffset);
 });
