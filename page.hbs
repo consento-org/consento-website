@@ -2,7 +2,7 @@
 
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the page --}}
-
+<div class="container">
 {{#if feature_image}}
 <section class="featured">
     <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
@@ -11,7 +11,6 @@
 {{^}}
 <section class="no-featured">
 {{/if}}
-
     <header class="main content">
         <h1>{{title}}</h1>
     </header>
@@ -23,6 +22,7 @@
         {{> supporters}}
     {{/has}}
 </section>
+</div>
 
 
 {{/post}}

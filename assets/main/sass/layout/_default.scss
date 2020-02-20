@@ -14,6 +14,7 @@ header.main>:last-child {
     .no-featured {
         margin-bottom: 50px;
         .content {
+            max-width: none;
             blockquote {
                 border-left: none;
                 padding-left: 4em;
