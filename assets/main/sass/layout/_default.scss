@@ -19,6 +19,16 @@ header.main>:last-child {
             blockquote {
                 border-left: none;
                 padding-left: 4em;
+                font-family: WorkSans-Light;
+                font-size: 18px;
+                font-style: normal;
+                line-height: 27px;
+            }
+            figcaption {
+                font-family: WorkSans-Light;
+                font-size: 18px;
+                font-style: normal;
+                line-height: 27px;
             }
             h1, h2 {
                 margin-bottom: 20px;
@@ -29,6 +39,12 @@ header.main>:last-child {
             }
             p {
                 margin-bottom: 20px;
+            }
+            ol > li {
+                font-family: WorkSans-Regular;
+                font-size: 16px;
+                font-style: normal;
+                line-height: normal;
             }
         }
     }
