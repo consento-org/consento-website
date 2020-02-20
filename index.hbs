@@ -11,21 +11,22 @@ into the {body} of the default.hbs template --}}
         <h1>Blog</h1>
         <p>News &amp; thoughts about the consento process.</p>
     </header>
-
-    <section class="posts">
-        {{#foreach posts}}
-        <article>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-            {{/if}}
-            <h3><a href="{{url}}">{{title}}</a></h3>
-            <p>{{excerpt words="33"}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
-            </ul>
-        </article>
-        {{/foreach}}
-    </section>
+    <div class="container">
+        <section class="posts">
+            {{#foreach posts}}
+            <article>
+                {{#if feature_image}}
+                <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+                {{/if}}
+                <h3><a href="{{url}}">{{title}}</a></h3>
+                <p>{{excerpt words="33"}}</p>
+                <ul class="actions special">
+                    <li><a href="{{url}}" class="button">Full Story</a></li>
+                </ul>
+            </article>
+            {{/foreach}}
+        </section>
+    </div>
 
 </section>
 
