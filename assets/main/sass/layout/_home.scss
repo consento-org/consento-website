@@ -84,6 +84,10 @@ pre code {
     }
 }
 
+.roadmap-area {
+    border-bottom: 6px solid rgba(55, 175, 201, 0.57);
+}
+
 .progress-block {
     .backlog-border {
         border-left: solid 4px #ef3433;
@@ -138,14 +142,23 @@ pre code {
     .text-right {
         text-align: center !important;
     }
-    .roadmap-border h3 {
-        font-size: 36px;
+    .roadmap-border {
+        border-bottom: none;
+        h3 {
+            font-size: 36px;
+        }
+    }
+    .large-screen {
+        display: none;
     }
 }
 @media screen and (min-width: 576px) {
     #how_it_works p {
         text-align: left;
-    }  
+    }
+    .small-screen {
+        display: none;
+    }
 }
 @media screen and (min-width: 768px) {
     #intro img {
