@@ -1,26 +1,11 @@
 // Main
 // --------------------------------------------
 
-@include breakpoint('<=small') {
-    #sidebar:not(.inactive) .toggle:before {
-        color: #fff;
-    }
-
-    #sidebar:not(.inactive) .toggle:after {
-        background: #f56a6a;
-    }
-}
-
-#banner {
-    border-bottom: solid 2px rgba(210, 215, 217, 0.75);
-}
-
-
 .content {
     max-width: 760px;
     margin: 0 auto;
     padding: 0 30px;
-    background: white;
+    background: _palette(bg);
 }
 
 // Pagination
@@ -57,7 +42,7 @@
     border-bottom: solid 1px _palette(border);
     text-align: center;
     p {
-        font-family: WorkSans-Light;
+        font-family: _font(family-light);
         font-size: 21px;
     }
 }
@@ -71,7 +56,7 @@
     flex-direction: column;
     align-items: center;
     padding: 4em 0 3em 0;
-    border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+    border-bottom: solid 2px transparentize(_palette(fg-light), 0.75);
     text-align: center;
 
 }
@@ -81,9 +66,9 @@
     margin: 0 0 15px 0;
     width: 100px;
     height: 100px;
-    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    box-shadow: transparentize(_palette(bg), 0.1) 0 0 0 6px;
     display: block;
-    background: #222;
+    background: _palette(fg-light);
     border-radius: 100%;
 
     object-fit: cover;
@@ -120,24 +105,30 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 -40px;
-    background-color: white;
+    background-color: _palette(bg);
 }
 
 .author-box  {
+    color: _palette(fg);
     flex: 1 1 300px;
     display: inline-flex;
     align-items: flex-start;
-    padding: 5px 20px;
+    padding: 20px;
     margin: 0 20px 20px;
     border: none;
+    &:hover {
+        color: _palette(fg);
+        background: _palette(bg-light);
+        text-decoration: none;
+    }
 }
 
 .author-box:hover {
-    color: #212931 !important;
+    color: _palette(fg-bold) !important;
 }
 
 .author-box:hover .author-box-name {
-    color: #18bfef;
+    color: _palette(fg-link);
     transition: color 0.2s ease;
 }
 
@@ -153,12 +144,12 @@
 }
 
 .author-box-label {
-    font-family: WorkSans-SemiBold;
+    font-family: _font(family-heading);
     font-size: 0.7rem;
     line-height: 1em;
     font-weight: 300;
     text-transform: uppercase;
-    color: #999;
+    color: _font(fg-light);
 }
 
 .author-box-name {
@@ -170,7 +161,7 @@
 
 .author-box p {
     margin: 0;
-    font-family: WorkSans-Light;
+    font-family: _font(family-light);
     font-size: 1em;
     line-height: 1.4em;
 }

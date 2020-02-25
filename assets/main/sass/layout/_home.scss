@@ -1,23 +1,23 @@
 .default_button {
-    font-family: Catamaran-SemiBold;
+    font-family: _font(family-alt);
     text-decoration: none;        
     padding-top: 15px;
     height: 60px;
     width: 320px;
     border: none;
     border-radius: 11px;
-    background-color: #37AFC9;
+    background-color: _palette(button-bg);
     box-shadow: none;
     font-size: 24px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.87) !important;
+    font-weight: _font(weight-semi-bold);
+    color: _palette(button-fg) !important;
 }
 
 .default_button:hover {
-    background-color: #9DE0EF;
-    border-color:  #37AFC9;
+    background-color: _palette(button-alt-bg);
+    border-color: _palette(button-bg);
     opacity: 1;
-    color: white !important;
+    color: _palette(button-fg) !important;
 }
 
 #consento_home {
@@ -70,8 +70,8 @@
 }
 
 pre code {
-    background-color: #eee;
-    border: 1px solid #999;
+    background-color: _palette(_code-bg);
+    border: 1px solid _palette(_code-border);
     display: block;
     padding: 20px;
 }
