@@ -81,6 +81,12 @@
 .author-meta {
     display: flex;
     align-items: center;
+    a {
+        color: _pallete(fg-light);
+        &:hover {
+            color: _pallete(fg-link);
+        }
+    }
 }
 
 .author-meta .icon,
