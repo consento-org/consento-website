@@ -84,7 +84,7 @@
 
 		#trusted_companies a {
 			text-decoration: none;
-			font-weight: bold;
+			font-weight: _font(weight-semi-bold);
 			border: none;
 			color: _palette(fg-alt-link);
 			&:hover {
