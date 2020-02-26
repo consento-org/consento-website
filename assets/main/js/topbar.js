@@ -9,7 +9,6 @@
         element.classList.toggle('scroll_shadow', isScrolledToTop || (hasDropDown && isDropdownExpanded));
     }
 
-    $(document).on('click.bs.button.data-api', scrollShadow);
-    $(document).ready(scrollShadow);
+    $(document).on('click.bs.button.data-api ready', scrollShadow);
     $(window).on('scroll resize', scrollShadow);
 })()
