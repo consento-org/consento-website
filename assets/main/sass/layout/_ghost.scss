@@ -42,7 +42,8 @@
     border-bottom: solid 1px _palette(border);
     text-align: center;
     p {
-        font-family: _font(family-light);
+        font-family: _font(family);
+        font-weight: _font(weight-semi-bold);
         font-size: 21px;
     }
 }
