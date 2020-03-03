@@ -42,8 +42,13 @@
     margin-right: 5px;
 }
 
-#icon_area p {
-    font-size: 24px;
+#icon_area {
+    p {
+        font-size: 24px;
+    }
+    img {
+        width: 150px;
+    }
 }
 
 .fixed-block-height {
