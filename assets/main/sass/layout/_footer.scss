@@ -20,7 +20,8 @@
 
 		h2 {
 			font-size: 36px;
-			font-family: _font(family-heading);
+			font-family: _font(family-alt);
+			font-weight: _font(weight-semi-bold);
 			color: _palette(fg-alt-header) !important;
 		}
 
@@ -33,16 +34,12 @@
 			}
 		}
 
-		p {
-			font-family: _font(family-light);
-			font-size: 21px;
-			line-height: normal;
+		p {	
 			letter-spacing: normal;
 			color: _palette(fg-alt) !important;
 		}
 
 		li {
-			font-family: _font(family-light);
 			padding-left: 0px;
 			font-size: 21px;
 			padding-bottom: 10px;
