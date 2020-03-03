@@ -1,17 +1,14 @@
-const scrollShadow = function(clicked) {
-    let element = document.getElementById("top-bar");
-    if (clicked == true && window.pageYOffset < 40) {
-         element.classList.toggle('scroll_shadow');
-    } else {
-        window.pageYOffset > 40 || document.getElementById('navbarSupportedContent').classList.contains('show') ? element.classList.add('scroll_shadow') : element.classList.remove('scroll_shadow');
+(function () {
+    const element = document.getElementById("top-bar");
+    const toggleButton = document.getElementById('toggle-button');
+
+    const scrollShadow = function () {
+        const isScrolledToTop = window.pageYOffset > 40;
+        const hasDropDown = document.body.offsetWidth < 768;
+        const isDropdownExpanded = !toggleButton.classList.contains('collapsed');
+        element.classList.toggle('scroll_shadow', isScrolledToTop || (hasDropDown && isDropdownExpanded));
     }
-}
 
-document.getElementById('toggle-button').addEventListener("click", function() {
-    scrollShadow(true)
-});
-
-$(document).ready(scrollShadow);
-
-$(window).scroll(scrollShadow);
-
+    $(document).on('click.bs.button.data-api ready', scrollShadow);
+    $(window).on('scroll resize', scrollShadow);
+})()
