@@ -32,6 +32,16 @@
   align-items: center;
   margin-top: 1.5em;
 }
+.kg-bookmark-publisher, .kg-bookmark-author {
+  margin-left: 0.5em;
+}
+.kg-bookmark-author::after {
+  content: "•";
+  margin-right: 0.3em;
+}
+.kg-bookmark-publisher {
+  color: _palette(fg-link);
+}
 .kg-bookmark-thumbnail {
   position: relative;
   flex-grow: 1;
