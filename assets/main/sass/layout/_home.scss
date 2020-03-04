@@ -124,6 +124,9 @@ pre code {
     #intro h1, #tech h2, #integrity h3 {
         padding-left: inherit;
     }
+    #intro img {
+        width: 75%;
+    }
 
     #solution h2 {
         padding-right: inherit;
@@ -148,7 +151,7 @@ pre code {
 @media screen and (min-width: 768px) {
     #intro img {
         max-width: 31em;
-        margin-top: -24em !important;
+        margin-top: -20em !important;
         @media screen and (min-width: 992px) {
             margin-top: -18em !important;
         }
