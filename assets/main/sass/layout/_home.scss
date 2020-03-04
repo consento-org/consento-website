@@ -79,12 +79,6 @@ pre code {
     padding: 20px;
 }
 
-.roadmap-border {
-    h3 {
-        font-size: 36px;
-    }
-}
-
 .progress-block {
     .backlog-border {
         border-left: solid 4px #ef3433;
@@ -93,6 +87,9 @@ pre code {
     .progress-border {
         border-left: solid 4px #37afc9;
         margin-top: 15px;
+    }
+    h3 {
+        font-size: 36px;
     }
     h4 {
         font-size: 21px;
