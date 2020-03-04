@@ -160,6 +160,11 @@ pre code {
         margin-top: -9em !important;
     }
 }
+@media screen and (min-width: 992px) {
+    #roadmap img {
+        width: 65%;
+    }
+}
 @media screen and (min-width: 1200px) {
     #how_it_works {
         margin-bottom: 5em !important;
