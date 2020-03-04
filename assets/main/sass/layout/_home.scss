@@ -81,8 +81,7 @@ pre code {
 
 .roadmap-border {
     h3 {
-        font-size: 1.25em;
-        margin-bottom: 5px;
+        font-size: 36px;
     }
 }
 
@@ -110,19 +109,6 @@ pre code {
     }
 }
 
-.large-screen {
-    display: initial;
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
-}
-
-.small-screen {
-    display: none;
-    @media screen and (max-width: 767px) {
-        display: initial;
-    }
-}
 @media screen and (max-width: 575px) {
     .default_button {
         width: 100%;
@@ -152,12 +138,6 @@ pre code {
     }
     .text-right {
         text-align: center !important;
-    }
-    .roadmap-border {
-        border-bottom: none;
-        h3 {
-            font-size: 36px;
-        }
     }
 }
 @media screen and (min-width: 576px) {
