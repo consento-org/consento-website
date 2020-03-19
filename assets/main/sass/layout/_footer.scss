@@ -60,21 +60,17 @@
 			padding-left: 5px;
 			padding-right: 5px;
 			padding-top: 15px;
-	  }
-
-		.icons li {
-			font-size: 16px;
+			li {
+				font-size: 16px;
+				a {
+					width: 15px;
+				}
+			}
+			a:hover { 
+				color: _palette(fg-alt-link);
+				text-decoration: none;
+			}
 		}
-
-		.icons a:hover { 
-			color: _palette(fg-alt-link);
-			text-decoration: none;
-		}
-
-		.icons > li > a {
-			width: 15px;
-		}
-
 		.footer-icons > li > a {
 			width: 15px;
 		}
