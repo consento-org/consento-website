@@ -16,14 +16,15 @@
 // Breakpoints.
 
 	@include breakpoints((
-		xlarge:   ( 1281px,  1680px ),
-		large:    ( 981px,   1280px ),
-		medium:   ( 737px,   980px  ),
-		small:    ( 481px,   736px  ),
-		xsmall:   ( 361px,   480px  ),
-		xxsmall:  ( null,    360px  ),
-		xlarge-to-max:    '(min-width: 1681px)',
-		small-to-xlarge:  '(min-width: 481px) and (max-width: 1680px)'
+		maxx:     ( _breaks(maxx), null ),
+		xlarge:   ( _breaks(xlarge), _breaks(maxx) ),
+		large:    ( _breaks(large),  _breaks(xlarge) - 1 ),
+		medium:   ( _breaks(medium), _breaks(large) - 1  ),
+		small:    ( _breaks(small),  _breaks(medium) - 1 ),
+		xsmall:   ( _breaks(xsmall), _breaks(small) - 1 ),
+		xxsmall:  ( null,    _breaks(xsmall) - 1  ),
+		xlarge-to-max:    '(min-width: ' + _breaks(xlarge) + ')',
+		small-to-xlarge:  '(min-width: ' + _breaks(small) + ') and (max-width: ' + (_breaks(xlarge) - 1) + ')'
 	));
 
 // Base.
