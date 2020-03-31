@@ -14,22 +14,49 @@
 		}
 	}
 
-	section.featured {
-		padding: 0!important;
-		overflow: hidden;
-		display: block;
-		height: 32vw;
-		z-index: 0;
-		padding-top: 3em;
-		margin-bottom: -10em;
-
-		@include breakpoint('<=large') {
-			height: 47vw;
+	section {
+		&.featured {
+			padding: 0!important;
+			overflow: hidden;
+			display: block;
+			height: 32vw;
+			z-index: 0;
+			padding-top: 3em;
+			margin-bottom: -10em;
+	
+			@include breakpoint('<=large') {
+				height: 47vw;
+			}
+			@include breakpoint('<=small') {
+				margin-bottom: 0;
+			}
+		}
+		&.featured-content {
+			background: _palette(bg);
+		}
+		&.no-featured {
+			padding-top: 3em;
+			padding-bottom: 3em;
+			@include breakpoint('<=small') {
+				padding-top: 10em;
+			}
+		}
+		&.no-featured, &.featured-content {
+				h1, h2 {
+						padding-top: 0.2em;
+						margin-bottom: 20px;
+				}
+				p {
+						margin-bottom: 20px;
+				}
 		}
 	}
-	@include breakpoint('<=small') {
-		section.no-featured {
-			margin-top: 10em;
+
+	.post-template {
+		.date {
+				display: block;
+				text-align: right;
+				color: _palette(fg-light);
 		}
 	}
 

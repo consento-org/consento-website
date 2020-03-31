@@ -27,13 +27,12 @@
 </head>
 <body class="is-preload {{body_class}}">
 
+    {{> topbar}}
     <main id="main">
-        {{> topbar}}
-
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
-        {{> footer}}
     </main>
+    {{> footer}}
 
     {{!-- Theme Scripts --}}
     <script src="{{asset "main/js/jquery.min.js"}}"></script>
