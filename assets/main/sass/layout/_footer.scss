@@ -90,13 +90,13 @@
 				max-height: 91px;
 		}
 
-		@media screen and (max-width: 578px) {
+		@include breakpoint('<small') {
 			.footer-copyright {
 				margin-top: 15px;
 			}
 		}
 
-		@media screen and (max-width: 991px) {
+		@include breakpoint('<large') {
 			.header-icons {
 			text-align: left !important;
 			}
@@ -105,7 +105,7 @@
 			text-align: center;
 			}
 		}
-		@media screen and (min-width: 1400px) {
+		@include breakpoint('>=maxx') {
 			.header-icons .icons {
 			font-size: 21px;
 			}

@@ -16,10 +16,10 @@
 			-ms-overflow-style: scrollbar;
 		}
 
-	// Ensures page width is always >=320px.
+	// Ensures page width is always >= smallest size.
 		@include breakpoint('<=xsmall') {
 			html, body {
-				min-width: 320px;
+				min-width: _breaks(xmall);
 			}
 		}
 
