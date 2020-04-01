@@ -57,11 +57,14 @@
 		font-style: italic;
 	}
 
-	p, blockquote, #main li {
-		margin: 0 0 _size(element-margin) 0;
+	p, blockquote, li {
 		font-family: _font(family);
 		font-size: 1.4em;
 		line-height: 1.68em;
+	}
+
+	p, blockquote {
+		margin: 0 0 _size(element-margin) 0;
 	}
 
 	figcaption {
