@@ -37,9 +37,6 @@
 		&.no-featured {
 			padding-top: 3em;
 			padding-bottom: 3em;
-			@include breakpoint('<=small') {
-				padding-top: 10em;
-			}
 		}
 		&.no-featured, &.featured-content {
 				h1, h2 {
