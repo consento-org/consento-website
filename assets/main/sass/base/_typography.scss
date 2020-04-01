@@ -57,11 +57,19 @@
 		font-style: italic;
 	}
 
-	p {
-		margin: 0 0 _size(element-margin) 0;
+	p, blockquote, li {
 		font-family: _font(family);
 		font-size: 1.4em;
 		line-height: 1.68em;
+	}
+
+	p, blockquote {
+		margin: 0 0 _size(element-margin) 0;
+	}
+
+	figcaption {
+		font-family: _font(family-light);
+		font-style: normal;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -85,6 +93,7 @@
 		font-size: 4.61em;
 		margin: 0 0 (_size(element-margin) * 0.25) 0;
 		color: _palette(heading-h1);
+		line-height: 1.4;
 	}
 
 	h2 {
@@ -131,7 +140,6 @@
 	@include breakpoint('<=small') {
 		h1 {
 			font-size: 2em;
-			line-height: 1.4;
 		}
 
 		h2 {

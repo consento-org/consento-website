@@ -29,20 +29,20 @@
 
 #intro {
     img {
-        @media screen and (max-width: 574px) {
+        @include breakpoint('<small') {
             width: 75%;
         }
-        @media screen and (min-width: 575px) {
+        @include breakpoint('>=small') {
             max-width: 90%;       
         }
-        @media screen and (min-width: 768px) {
+        @include breakpoint('>=medium') {
             max-width: 28em;
             margin-top: -20em !important;
         }
-        @media screen and (min-width: 992px) {
+        @include breakpoint('>=large') {
             margin-top: -18em !important;
         }
-        @media screen and (min-width: 1200px) and (max-width: 1280px) {
+        @include breakpoint('>=xlarge') {
             margin-top: -14em !important;
         }
     }
@@ -104,7 +104,7 @@ pre code {
     }
     h3 {
         font-size: 36px;
-        @media screen and (min-width: 768px) and (max-width: 992px) {
+        @include breakpoint('medium') {
             font-size: 25px;
         }
     }
@@ -123,13 +123,15 @@ pre code {
     }
 }
 
-@media screen and (max-width: 575px) {
+@include breakpoint('<small') {
     .default_button {
         width: 100%;
-    }
-    .col-sm-6 h1, .col-sm-6 h2, .col-sm-6 h3, .col-sm-6 p {
-        margin-top: 25px !important;
-        margin-bottom: 5px !important;
+    }    
+    .col-sm-6 {
+        h1, h2, h3, p {
+            margin-top: 25px !important;
+            margin-bottom: 5px !important;
+        }
     }
 
     .col-sm-5, .col-sm-6, .button-wrapper {
@@ -154,12 +156,12 @@ pre code {
         text-align: center !important;
     }
 }
-@media screen and (min-width: 576px) {
+@include breakpoint('>=small') {
     #how_it_works p {
         text-align: left;
     }
 }
-@media screen and (min-width: 768px) {
+@include breakpoint('>=medium') {
     #intro {
         margin-top: 14em;
     }
@@ -173,12 +175,12 @@ pre code {
         margin-top: -9em !important;
     }
 }
-@media screen and (min-width: 992px) {
+@include breakpoint('>=large') {
     #roadmap img {
         width: 65%;
     }
 }
-@media screen and (min-width: 1200px) {
+@include breakpoint('>=xlarge') {
     #how_it_works {
         margin-bottom: 5em !important;
     }

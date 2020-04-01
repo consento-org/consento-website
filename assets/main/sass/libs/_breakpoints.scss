@@ -1,4 +1,15 @@
 // breakpoints.scss v1.0 | @ajlkn | MIT licensed */
+@function _first-index($string, $direction: 'left') {
+  @for $i from 1 through str-length($string) {
+    $index: if($direction == 'left', $i, -$i);
+
+    @if str-slice($string, $index, $index) != ' ' {
+      @return $index;
+    }
+  }
+
+  @return 0;
+}
 
 // Vars.
 
@@ -41,7 +52,7 @@
 				}
 
 			// Less than or equal.
-				@elseif (str-slice($query, 0, 2) == '<=') {
+				@else if (str-slice($query, 0, 2) == '<=') {
 
 					$op: 'lte';
 					$breakpoint: str-slice($query, 3);
@@ -49,7 +60,7 @@
 				}
 
 			// Greater than.
-				@elseif (str-slice($query, 0, 1) == '>') {
+				@else if (str-slice($query, 0, 1) == '>') {
 
 					$op: 'gt';
 					$breakpoint: str-slice($query, 2);
@@ -57,7 +68,7 @@
 				}
 
 			// Less than.
-				@elseif (str-slice($query, 0, 1) == '<') {
+				@else if (str-slice($query, 0, 1) == '<') {
 
 					$op: 'lt';
 					$breakpoint: str-slice($query, 2);
@@ -65,7 +76,7 @@
 				}
 
 			// Not.
-				@elseif (str-slice($query, 0, 1) == '!') {
+				@else if (str-slice($query, 0, 1) == '!') {
 
 					$op: 'not';
 					$breakpoint: str-slice($query, 2);
@@ -80,8 +91,17 @@
 
 				}
 
+			$breakpoint: str-slice(
+				$breakpoint,
+				_first-index($breakpoint, 'left'),
+				_first-index($breakpoint, 'right')
+			);
+
+			@if (not map-has-key($breakpoints, $breakpoint)) {
+				@error('Unknown breakpoint: "' + $breakpoint + '"')
+			}
+
 		// Build media.
-			@if ($breakpoint and map-has-key($breakpoints, $breakpoint)) {
 
 				$a: map-get($breakpoints, $breakpoint);
 
@@ -100,22 +120,22 @@
 									}
 
 								// Less than or equal (<= y)
-									@elseif ($op == 'lte') {
+									@else if ($op == 'lte') {
 										$media: 'screen and (max-width: ' + $y + ')';
 									}
 
 								// Greater than (> y)
-									@elseif ($op == 'gt') {
+									@else if ($op == 'gt') {
 										$media: 'screen and (min-width: ' + ($y + 1) + ')';
 									}
 
 								// Less than (< 0 / invalid)
-									@elseif ($op == 'lt') {
+									@else if ($op == 'lt') {
 										$media: 'screen and (max-width: -1px)';
 									}
 
 								// Not (> y)
-									@elseif ($op == 'not') {
+									@else if ($op == 'not') {
 										$media: 'screen and (min-width: ' + ($y + 1) + ')';
 									}
 
@@ -135,22 +155,22 @@
 									}
 
 								// Less than or equal (<= inf / anything)
-									@elseif ($op == 'lte') {
+									@else if ($op == 'lte') {
 										$media: 'screen';
 									}
 
 								// Greater than (> inf / invalid)
-									@elseif ($op == 'gt') {
+									@else if ($op == 'gt') {
 										$media: 'screen and (max-width: -1px)';
 									}
 
 								// Less than (< x)
-									@elseif ($op == 'lt') {
+									@else if ($op == 'lt') {
 										$media: 'screen and (max-width: ' + ($x - 1) + ')';
 									}
 
 								// Not (< x)
-									@elseif ($op == 'not') {
+									@else if ($op == 'not') {
 										$media: 'screen and (max-width: ' + ($x - 1) + ')';
 									}
 
@@ -170,22 +190,22 @@
 									}
 
 								// Less than or equal (<= y)
-									@elseif ($op == 'lte') {
+									@else if ($op == 'lte') {
 										$media: 'screen and (max-width: ' + $y + ')';
 									}
 
 								// Greater than (> y)
-									@elseif ($op == 'gt') {
+									@else if ($op == 'gt') {
 										$media: 'screen and (min-width: ' + ($y + 1) + ')';
 									}
 
 								// Less than (< x)
-									@elseif ($op == 'lt') {
+									@else if ($op == 'lt') {
 										$media: 'screen and (max-width: ' + ($x - 1) + ')';
 									}
 
 								// Not (< x and > y)
-									@elseif ($op == 'not') {
+									@else if ($op == 'not') {
 										$media: 'screen and (max-width: ' + ($x - 1) + '), screen and (min-width: ' + ($y + 1) + ')';
 									}
 
@@ -213,10 +233,8 @@
 
 					}
 
-			}
-
 		// Output.
-	        @media #{$media} {
+		  @media #{$media} {
 				@content;
 			}
 

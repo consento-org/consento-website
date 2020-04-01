@@ -1,54 +1,7 @@
 .navbar {
     max-height: 100%;
 }
-header.content {
-    padding-top: 9em;
-}
 header.main>:last-child {
     margin: 0px;
     margin-bottom: 0.5em;
-}
-.page-about, .page-team, .page-supporters, .page-credits {
-    .no-featured {
-        margin-bottom: 50px;
-        .content {
-            blockquote {
-                border-left: none;
-                padding-left: 4em;
-                font-family: _font(family-light);
-                font-size: 18px;
-                font-style: normal;
-                line-height: 27px;
-            }
-            figcaption {
-                font-family: _font(family-light);
-                font-size: 18px;
-                font-style: normal;
-                line-height: 27px;
-            }
-            h1, h2 {
-                margin-bottom: 20px;
-            }
-            h2 {
-              font-size: 36px;
-              font-family: _font(family-alt); 
-            }
-            p {
-                margin-bottom: 20px;
-            }
-            ol > li {
-                font-family: _font(family);
-                font-size: 16px;
-                font-style: normal;
-                line-height: normal;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 736px) {
-    header.content {
-        padding-top: 1em;
-        margin-bottom: 3em;
-    }
 }

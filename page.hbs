@@ -6,17 +6,17 @@
 <section class="featured">
     <div class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></div>
 </section>
-<section>
+<section class="featured-content container">
 {{^}}
-<section class="no-featured">
+<section class="no-featured container">
 {{/if}}
-    <header class="main content">
+    <header class="main">
         <h1>{{title}}</h1>
     </header>
 
-    <div class="content">
+    <article>
         {{content}}
-    </div>
+    </article>
 </section>
 
 {{/post}}

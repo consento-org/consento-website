@@ -6,9 +6,19 @@
 
 /* List */
 
+	ol, ul, dl {
+		margin: 0 0 (_size(element-margin) * 0.5) 0.5em;
+
+		li {
+			margin: 0 0 (_size(element-margin) * 0.5) 0;
+			&.short {
+				margin-bottom: (_size(element-margin) * 0.125);
+			}
+		}
+	}
+
 	ol {
 		list-style: decimal;
-		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1.25em;
 
 		li {
@@ -18,7 +28,6 @@
 
 	ul {
 		list-style: disc;
-		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1em;
 
 		li {
@@ -42,7 +51,6 @@
 	}
 
 	dl {
-		margin: 0 0 _size(element-margin) 0;
 
 		dt {
 			display: block;
