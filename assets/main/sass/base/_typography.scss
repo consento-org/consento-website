@@ -90,6 +90,7 @@
 		font-size: 4.61em;
 		margin: 0 0 (_size(element-margin) * 0.25) 0;
 		color: _palette(heading-h1);
+		line-height: 1.4;
 	}
 
 	h2 {
@@ -136,7 +137,6 @@
 	@include breakpoint('<=small') {
 		h1 {
 			font-size: 2em;
-			line-height: 1.4;
 		}
 
 		h2 {
